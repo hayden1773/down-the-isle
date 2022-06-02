@@ -14,13 +14,13 @@ function Navbar() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
         <li className="nav-item ">
-          <Link to='/' className="nav-link " aria-current="page">Home</Link>
+          <Link to="/"className="nav-link " aria-current="page">Home</Link>
         </li>
         <li className="nav-item">
-          <Link to='/login' className="nav-link " aria-current="page">Login</Link>
+          <Link to="/login" className="nav-link " aria-current="page">Login</Link>
         </li>
         <li className="nav-item">
-          <Link to='/about' className="nav-link ">About us</Link>
+          <Link to="/about" className="nav-link ">About us</Link>
         </li>
         
       </ul>
