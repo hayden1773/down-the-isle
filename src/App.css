@@ -85,8 +85,11 @@ border-top: 0.1875rem solid var(--primary-dark);
   padding:10px 12px 12px 12px !important;
   color: beige;
 }
+
 .btn-resume :hover {
   text-decoration: none;
   background-color: orange ;
   transition: .2s ease-in-out ;
 }
+
+/* ABOUT US PAGE  */
