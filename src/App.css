@@ -93,20 +93,6 @@ border-top: 0.1875rem solid var(--primary-dark);
 }
 
 /* ABOUT US PAGE  */
-/* #img1, #img3 {
-  height: 300px;
-  width: 300px;
-}
-
-#img2 {
-height: 300px;
-width: 400px;
-}
-
-#img4 {
-  height: 150px;
-  width: 400px;
-} */
 
 #aboutUs {
   text-align: center;
@@ -120,10 +106,6 @@ width: 400px;
 #aboutUs > #image1, p{
 display: inline;
 }
-
-/* #about ul {
-  display: inline-block;
-} */
 
 .image1 {
 height: 250px;
