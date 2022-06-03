@@ -92,7 +92,7 @@ border-top: 0.1875rem solid var(--primary-dark);
   transition: .2s ease-in-out ;
 }
 
-/* ABOUT US PAGE  */
+/*------ABOUT US PAGE------- */
 
 #aboutUs {
   text-align: center;
@@ -103,9 +103,9 @@ border-top: 0.1875rem solid var(--primary-dark);
   padding: 3px;
 }
 
-#aboutUs > #image1, p{
+/* #aboutUs > #image1, p{
 display: inline;
-}
+} */
 
 .image1 {
 height: 250px;
