@@ -17,7 +17,7 @@ nav ul li{
 .navbar-nav > li > a {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
-color: goldenrod !important;
+color: green !important;
 border-top: 0.1875rem solid var(--primary-dark);
 }
 
