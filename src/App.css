@@ -5,6 +5,10 @@ nav a.nav-link {
  
 }
 
+#pagelogo {
+  height: 140px;
+}
+
 
 nav ul li{
   text-transform: uppercase;
