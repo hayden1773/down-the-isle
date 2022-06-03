@@ -101,6 +101,7 @@ border-top: 0.1875rem solid var(--primary-dark);
 
 #aboutUs p {
   padding: 3px;
+  text-align: center;
 }
 
 /* #aboutUs > #image1, p{
@@ -111,5 +112,10 @@ display: inline;
 height: 250px;
 width: 270px;
 padding: 5px;
+opacity: 0.4;
+}
+
+.image1:hover {
+  opacity: 1;
 }
 
