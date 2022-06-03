@@ -1,5 +1,5 @@
 import React from "react"
-import logo from "../components/logo.png"
+import logo from "../components/pagelogo.jpg"
 import { Link } from 'react-router-dom'
 
 function Navbar() {
@@ -12,6 +12,7 @@ function Navbar() {
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <img className="logo" src={logo} id="pagelogo"/>
       <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
         <li className="nav-item ">
           <Link to="/"className="nav-link " aria-current="page">Home</Link>
