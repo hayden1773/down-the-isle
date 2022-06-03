@@ -1,16 +1,15 @@
 import React from 'react'
+import About from "../components/About/index"
 import Navbar from "../components/NavBar/index"
-// import Footer 
 
 
-const Login = () => {
+const AboutUs = () => {
   return (
     <div>
       <Navbar />
-{/* login */}
-      // <Footer />
+     <About />
     </div>
   )
 }
 
-export default Login
+export default AboutUs

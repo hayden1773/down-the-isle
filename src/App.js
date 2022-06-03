@@ -2,16 +2,14 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './components/NavBar/index';
-import Header from './components/Header';
-import About from './components/About';
+import Homepage from './pages/Homepage';
+import About from './pages/About';
 
 function App() {
   return (
     <BrowserRouter>
-    <Navbar />
     <Routes>
-    <Route path='/' element={<Header/>}/>
+    <Route path='/' element={<Homepage/>}/>
     <Route path='/about' element={<About/>}/>
     </Routes>
     </BrowserRouter>

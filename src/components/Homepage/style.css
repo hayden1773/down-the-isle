@@ -1,42 +1,4 @@
-nav a.nav-link {
-    /* font-weight: 500; */
-    letter-spacing:  0.0375rem;
-    cursor: pointer;
-   
-  }
-  
-  #pagelogo {
-    height: 140px;
-  }
-  
-  
-  nav ul li{
-    text-transform: uppercase;
-  }
-  
-  .navbar-nav > li > a {
-    margin-right: 0.75rem;
-    margin-left: 0.75rem;
-  color: green !important;
-  border-top: 0.1875rem solid var(--primary-dark);
-  }
-  
-  .navbar-brand {
-    max-width: 17.25rem;
-    padding: 0 !important;
-    height:6rem  !important;
-  }
-  
-  .navbar-nav >li > a.active, .navbar-nav > li > a.active:focus {
-    border-top: 0.1875rem solid goldenrod;
-  
-  }
-  
-  .navbar-nav > li > a:hover {
-    border-top: 0.1875rem solid goldenrod;
-  }
-
-  .header-wrapper {
+.header-wrapper {
     position: relative;
     background: url("https://imgix.bustle.com/uploads/image/2019/5/30/939d1229-54b1-41b6-a1a0-8b390d49bbd6-wedding_beach_couple.jpg?w=1200&h=630&fit=crop&crop=faces&fm=jpg") no-repeat;
     background-size: cover;
@@ -59,7 +21,7 @@ nav a.nav-link {
     
   }
   
-.main-info h1 {
+  .main-info h1 {
     color: var(--primary-white);
     text-transform: uppercase;
   }
@@ -79,9 +41,9 @@ nav a.nav-link {
     padding:10px 12px 12px 12px !important;
     color: beige;
   
-  } 
+  }
   
-.btn-find {
+  .btn-find {
     display: inline-flex;
     border:1px solid ;
     text-transform: uppercase;
@@ -94,4 +56,4 @@ nav a.nav-link {
     text-decoration: none;
     background-color: orange ;
     transition: .2s ease-in-out ;
-  } 
+  }
