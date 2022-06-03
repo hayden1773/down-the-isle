@@ -1,8 +1,8 @@
 import React from "react"
-import logo from "../components/pagelogo.jpg"
+import logo from "../../assets/images/pagelogo.jpg"
 import { Link } from 'react-router-dom'
 
-function Navbar() {
+export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white text-black">
   <div className="container-fluid">
@@ -32,4 +32,4 @@ function Navbar() {
   )
 }
 
-export default Navbar;
+// export default Navbar;

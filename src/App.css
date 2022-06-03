@@ -21,16 +21,16 @@ color: green !important;
 border-top: 0.1875rem solid var(--primary-dark);
 }
 
-.navbar-brand {
+/* .navbar-brand {
   max-width: 17.25rem;
   padding: 0 !important;
   height:6rem  !important;
-}
+} */
 
-.navbar-nav >li > a.active, .navbar-nav > li > a.active:focus {
+/* .navbar-nav >li > a.active, .navbar-nav > li > a.active:focus {
   border-top: 0.1875rem solid goldenrod;
 
-}
+} */
 
 .navbar-nav > li > a:hover {
   border-top: 0.1875rem solid goldenrod;
@@ -79,9 +79,9 @@ border-top: 0.1875rem solid var(--primary-dark);
   padding:10px 12px 12px 12px !important;
   color: beige;
 
-}
+} 
 
-.btn-find {
+/* .btn-find {
   display: inline-flex;
   border:1px solid ;
   text-transform: uppercase;
@@ -94,11 +94,11 @@ border-top: 0.1875rem solid var(--primary-dark);
   text-decoration: none;
   background-color: orange ;
   transition: .2s ease-in-out ;
-}
+} */
 
 /*------ABOUT US PAGE------- */
 
-#aboutUs {
+/* #aboutUs {
   text-align: center;
   padding-top: 10px;
 }
@@ -106,20 +106,20 @@ border-top: 0.1875rem solid var(--primary-dark);
 #aboutUs p {
   padding: 3px;
   text-align: center;
-}
+} */
 
 /* #aboutUs > #image1, p{
 display: inline;
 } */
 
-.image1 {
+/* .image1 {
 height: 250px;
 width: 270px;
 padding: 5px;
 opacity: 0.4;
-}
+} */
 
-.image1:hover {
+/* .image1:hover {
   opacity: 1;
-}
+} */
 
