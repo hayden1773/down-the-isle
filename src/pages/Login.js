@@ -1,16 +1,17 @@
 import React from 'react'
 import Navbar from "../components/NavBar/index"
+import Login from "../components/Login/index"
 // import Footer 
 
 
-const Login = () => {
+const LoginPage = () => {
   return (
     <div>
       <Navbar />
-{/* login */}
-      // <Footer />
+      <Login/>
+      {/* // <Footer /> */}
     </div>
   )
 }
 
-export default Login
+export default LoginPage
