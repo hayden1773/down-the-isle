@@ -15,6 +15,8 @@ function Login () {
           <input type="password"></input>
           <br/>
           <button className="submitBtn">Submit</button>
+          <br/>
+          <button className="createAcctBtn">Create an Account</button>
       </form>
   </div>
 )
