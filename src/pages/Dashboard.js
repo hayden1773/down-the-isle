@@ -1,15 +1,13 @@
 import React from 'react'
-
-import Navbar 
-import Footer 
+import About from "../components/About/index"
+import Navbar from "../components/NavBar/index"
 
 
 const Dashboard = () => {
   return (
     <div>
       <Navbar />
-     
-      <Footer />
+     <About />
     </div>
   );
 }
