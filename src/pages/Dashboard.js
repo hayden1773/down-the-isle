@@ -1,15 +1,15 @@
 import React from 'react'
-import About from "../components/About/index"
-import Navbar from "../components/NavBar/index"
+import Navbar from '../components/NavBar/index'
+import Dashboard from '../components/Dashboard/index'
 
 
-const Dashboard = () => {
+const DashboardPage = () => {
   return (
     <div>
       <Navbar />
-     <About />
+      <Dashboard />
     </div>
-  );
+  )
 }
 
-export default Dashboard
+export default DashboardPage
