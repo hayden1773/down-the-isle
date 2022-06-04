@@ -1,19 +1,33 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-// import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 // import { AnimateSharedLayout } from 'framer-motion'
 import './style.css'
 
 function Dashboard () {
   return (
-    <div className="UserDash">
+    <motion.div  
+    initial={{
+      opacity: 0,
+      x:100,
+      y:100
+    }}
+    animate={{
+      opacity: 1,
+      x:0,
+      y:0
+
+    }} 
+    transition={{
+      duration:5
+    }} className="UserDash">
       <h1>Dashboard</h1>
       <Link to="/createinvite"><button className="createInvite">Create an Invite</button></Link>
       <Link to="/viewinvite"><button className="viewInvite">View Invite</button></Link>
       <Link to="/itinerary"><button className="Itinerary">View Itinerary</button></Link>
       <Link to="/guestlist"><button className="guestList">Guest List</button></Link>
 
-    </div>
+    </motion.div>
   );
 }
 
