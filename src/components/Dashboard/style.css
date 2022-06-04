@@ -1,3 +1,19 @@
-body {
+/* body {
     background-color: pink;
+} */
+
+.createInvite, .viewInvite, .Itinerary, .guestList {
+    padding: 6px;
+    margin-top: 5px;
+    background-color: rgb(107, 156, 107);
+    /* background-color: #9CAE68; */
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    color: white;
+    width: 202px;
+  }
+
+.createInvite:hover, .viewInvite:hover, .Itinerary:hover, .guestList:hover  {
+    background-color: green;
 }
