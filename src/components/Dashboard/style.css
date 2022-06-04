@@ -3,6 +3,9 @@
 } */
 
 .createInvite, .viewInvite, .Itinerary, .guestList {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding: 6px;
     margin-top: 5px;
     background-color: rgb(107, 156, 107);
