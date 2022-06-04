@@ -1,4 +1,5 @@
 import React from "react"
+import './style.css'
 import logo from "../../assets/images/pagelogo.jpg"
 import { Link } from 'react-router-dom'
 
