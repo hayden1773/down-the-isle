@@ -16,7 +16,7 @@ function Login () {
           <input type="password"></input>
           <br/>
                 {/* take the user to dashboard */}
-          <button className="submitBtn">Submit</button>
+          <Link to="/dashboard"><button className="submitBtn">Submit</button></Link>
           <br/>
                  {/* generate Create Account form */}
           <Link to="/"><button className="createAcctBtn">Create an Account</button></Link>
