@@ -29,34 +29,68 @@ export default function Login(props) {
       })
   }
   return (
-<div className="loginForm">
+<div class="form-modal">
+    
+    <div class="form-toggle">
+        <button id="login-toggle" onclick="toggleLogin()">log in</button>
+        <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
+    </div>
 
-<h2>Login</h2>
-<form onSubmit={loginSubmit}>
-          <label>Name</label>
-          <br/>
-          <input value={loginData.username} type="text"  name="loginUsername" placeholder="username" onChange={(e)=>setLoginData({...loginData,username:e.target.value})}/>
-          <br/>
-          <label>Password</label>
-          <br/>
-          <input value={loginData.password}  type="password" name="loginPassword" onChange={(e)=>setLoginData({...loginData,password:e.target.value})}/>
-          <button>Login</button>
-          <br/>
-                {/* take the user to dashboard */}
-          <Link to="/dashboard"><button className="submitBtn">Dashboard</button></Link>
-          <br/>
-                 {/* generate Create Account form */}
-          <Link to="/"><button className="createAcctBtn">Create an Account</button></Link>
-      </form>
-      <hr/>
-        <h2>Signup</h2>
-        <form onSubmit={signupSubmit}>
-            <input value={signupData.username} type="text" name="signupUsername" placeholder="username" onChange={(e)=>setSignupData({...signupData,username:e.target.value})}/>
-            <input value={signupData.password} type="password" name="signupPassword" onChange={(e)=>setSignupData({...signupData,password:e.target.value})}/>
-            <button>signup</button>
+    <div id="login-form">
+        <form>
+            <input type="text" placeholder="Enter email or username"/>
+            <input type="password" placeholder="Enter password"/>
+            <button type="button" class="btn login">login</button>
+            <p><a href="javascript:void(0)">Forgotten account</a></p>
+            <hr/>
         </form>
-        <hr/>
-  </div>
+    </div>
+
+    <div id="signup-form">
+        <form>
+            <input type="email" placeholder="Enter your email"/>
+            <input type="text" placeholder="Choose username"/>
+            <input type="password" placeholder="Create password"/>
+            <button type="button" class="btn signup">create account</button>
+            <p>Clicking <strong>create account</strong> means that you are agree to our <a href="javascript:void(0)">terms of services</a>.</p>
+            <hr/>
+    
+        </form>
+    </div>
+
+</div>
+
+
+// {/* <div className="loginForm">
+
+// <h2>Login</h2>
+// <form onSubmit={loginSubmit}>
+//           <label>Name</label>
+//           <br/>
+//           <input value={loginData.username} type="text"  name="loginUsername" placeholder="username" onChange={(e)=>setLoginData({...loginData,username:e.target.value})}/>
+//           <br/>
+//           <label>Password</label>
+//           <br/>
+//           <input value={loginData.password}  type="password" name="loginPassword" placeholder="password" onChange={(e)=>setLoginData({...loginData,password:e.target.value})}/>
+//           <button>Login</button>
+//           <br/>
+//                 {/* take the user to dashboard */}
+//           <Link to="/dashboard"><button className="submitBtn">Dashboard</button></Link>
+//           <br/>
+//                  {/* generate Create Account form */}
+//           <Link to="/"><button className="createAcctBtn">Create an Account</button></Link>
+//       </form>
+//       <hr/>
+//         <h2>Signup</h2>
+//         <form onSubmit={signupSubmit}>
+//             <input value={signupData.username} type="text" name="signupUsername" placeholder="username" onChange={(e)=>setSignupData({...signupData,username:e.target.value})}/>
+//             <input value={signupData.password} type="password" name="signupPassword" placeholder="password"onChange={(e)=>setSignupData({...signupData,password:e.target.value})}/>
+//             <button>signup</button>
+//         </form>
+//         <hr/>
+//   </div>
+//   */}
+
  
 )
 }
