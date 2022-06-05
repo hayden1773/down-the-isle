@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard'
 import CreateInvites from './pages/CreateInvites'
 
+
 function App() {
   return (
     <BrowserRouter>
