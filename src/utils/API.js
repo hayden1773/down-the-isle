@@ -37,7 +37,7 @@ module.exports = {
         }).then(res=>res.json())
     },
     createVenue:(venueData,token)=>{
-        return fetch(`${BASE_URL}/api/games`,{
+        return fetch(`${BASE_URL}/api/venues`,{
             method:"POST",
             body:JSON.stringify(venueData),
             headers:{
@@ -48,7 +48,60 @@ module.exports = {
     },
     getOneVenue:venueId=>{
         return fetch(`${BASE_URL}/api/venues/${venueId}`).then(res=>res.json())
-    }
+    },
+
+    getAllVenues:()=>{
+        return fetch(`${BASE_URL}/api/venues`).then(res=>res.json())
+    },
+
+    getOneHotel:hotelId=>{
+        return fetch(`${BASE_URL}/api/hotels/${hotelId}`).then(res=>res.json())
+    },   
+
+    getAllHotels:()=>{
+        return fetch(`${BASE_URL}/api/hotels`).then(res=>res.json())
+    },
+
+    createHotel:(hotelData)=>{
+        return fetch(`${BASE_URL}/api/hotels`,{
+            method:"POST",
+            body:JSON.stringify(hotelData),
+            headers:{
+                "Content-Type":"application/json",
+                // authorization:`Bearer ${token}`
+            }
+        }).then(res=>res.json())
+    },
+    
+    getOneInvite:inviteId=>{
+        return fetch(`${BASE_URL}/api/invites/${inviteId}`).then(res=>res.json())
+    },
+
+    createInvite:(inviteData,token)=>{
+        return fetch(`${BASE_URL}/api/invites`,{
+            method:"POST",
+            body:JSON.stringify(inviteData),
+            headers:{
+                "Content-Type":"application/json",
+                authorization:`Bearer ${token}`
+            }
+        }).then(res=>res.json())
+    },
+
+    getOneEvent:eventId=>{
+        return fetch(`${BASE_URL}/api/events/${eventId}`).then(res=>res.json())
+    },
+
+    createEvent:(eventData,token)=>{
+        return fetch(`${BASE_URL}/api/events`,{
+            method:"POST",
+            body:JSON.stringify(eventData),
+            headers:{
+                "Content-Type":"application/json",
+                authorization:`Bearer ${token}`
+            }
+        }).then(res=>res.json())
+    },
 }
 
 
