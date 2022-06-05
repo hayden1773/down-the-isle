@@ -31,19 +31,19 @@ export default function Login(props) {
   return (
 <div className="loginForm">
 <h2>Login</h2>
-<form onSubmit={{loginSubmit}}>
-          <label>Name</label>
-          <br/>
+<form onSubmit={loginSubmit}>
+          {/* <label>Name</label>
+          <br/> */}
           <input value={loginData.username} type="text"  name="loginUsername" placeholder="username" onChange={(e)=>setLoginData({...loginData,username:e.target.value})}/>
-          <br/>
+          {/* <br/>
           <label>Password</label>
-          <br/>
+          <br/> */}
           <input value={loginData.password}  type="password" name="loginPassword" onChange={(e)=>setLoginData({...loginData,password:e.target.value})}/>
           <button>Login</button>
           <br/>
                 {/* take the user to dashboard */}
-          {/* <Link to="/dashboard"><button className="submitBtn">Submit</button></Link>
-          <br/> */}
+          <Link to="/dashboard"><button className="submitBtn">Dashboard</button></Link>
+          <br/>
                  {/* generate Create Account form */}
           {/* <Link to="/"><button className="createAcctBtn">Create an Account</button></Link> */}
       </form>
