@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import "./style.css";
 import { useSpring, animated } from "react-spring";
@@ -10,6 +11,7 @@ function App() {
   const itinerProps = useSpring({
     left: ItineraryStatus ? 0 : 500, // Itinerary form sliding positions 
   });
+
 
   const inviteBtnProps = useSpring({
     borderBottom: ItineraryStatus 
