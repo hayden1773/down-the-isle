@@ -1,17 +1,19 @@
 import React from 'react'
 
-import Navbar 
-import Footer 
+import Navbar from '../components/NavBar/index'
+import InviteForm from '../components/InviteForm/index'
+// import Footer 
 
 
-const Invites = () => {
+const Invite = () => {
   return (
     <div>
       <Navbar />
+      <InviteForm />
      
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
 
-export default Invites
+export default Invite
