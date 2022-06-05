@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect,useState } from "react";
 import API from "../utils/API"
-import Navbar from "../components/NavBar/index"
+// import Navbar from "../components/NavBar/index"
 import Login from "../components/Login/index"
 // import Footer 
 
@@ -55,7 +55,7 @@ const LoginPage = () => {
   }
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Login login={handleLoginSubmit} signup={handleSignupSubmit}/>
       {/* // <Footer /> */}
     </div>
