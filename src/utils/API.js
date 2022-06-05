@@ -1,6 +1,6 @@
 
 //DEVELOP
-const BASE_URL="http://localhost:3000"
+const BASE_URL="http://localhost:3001"
 //PROD
 // const BASE_URL="https://boardgames-back.herokuapp.com"
 
@@ -45,6 +45,9 @@ module.exports = {
                 authorization:`Bearer ${token}`
             }
         }).then(res=>res.json())
+    },
+    getOneVenue:venueId=>{
+        return fetch(`${BASE_URL}/api/venues/${venueId}`).then(res=>res.json())
     }
 }
 
