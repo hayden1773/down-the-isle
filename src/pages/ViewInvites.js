@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Navbar from '../components/NavBar/index'
+// import Navbar from '../components/NavBar/index'
 import InviteForm from '../components/InviteForm/index'
 // import Footer 
 
@@ -8,7 +8,7 @@ import InviteForm from '../components/InviteForm/index'
 const Invite = () => {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <InviteForm />
      
       {/* <Footer /> */}

@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import About from './pages/About';
 import Login from './pages/Login';
-
+import Navbar from "./components/NavBar";
 import Dashboard from './pages/Dashboard'
 import CreateInvites from './pages/CreateInvites'
 
@@ -15,6 +15,7 @@ function App() {
   
   return (
     <BrowserRouter>
+    <Navbar/>
     <Routes>
     <Route path='/' element={<Homepage/>}/>
     <Route path='/login' element={<Login/>}/>

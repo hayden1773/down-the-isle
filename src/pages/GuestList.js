@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Navbar 
+// import Navbar 
 import Footer 
 
 
