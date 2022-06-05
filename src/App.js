@@ -6,7 +6,7 @@ import Homepage from './pages/Homepage';
 import About from './pages/About';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard'
-import CreateInvites from './pages/CreateInvites'
+
 
 function App() {
   return (
