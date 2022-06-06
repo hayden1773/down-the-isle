@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Navbar from "./components/NavBar";
 import Dashboard from './pages/Dashboard'
 import CreateInvites from './pages/CreateInvites'
+import ViewInvites from './pages/ViewInvites'
 
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
     <Route path='/about' element={<About/>}/>
     <Route path='/dashboard' element={<Dashboard/>}/>
     <Route path='/createinvites' element={<CreateInvites/>}/>
+
+    {/* temp file */}
+    <Route path='/viewinvites' element={<ViewInvites/>}/>
     </Routes>
     </BrowserRouter>
   );
