@@ -1,7 +1,8 @@
 import React from 'react'
 
 // import Navbar from '../components/NavBar/index'
-import InviteForm from '../components/InviteForm/index'
+import InvitationPreview from '../components/InvitationPreview/index'
+
 // import Footer 
 
 
@@ -9,7 +10,7 @@ const Invite = () => {
   return (
     <div>
       {/* <Navbar /> */}
-      <InviteForm />
+      <InvitationPreview />
      
       {/* <Footer /> */}
     </div>
