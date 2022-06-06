@@ -1,15 +1,35 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import "./style.css";
 import { useSpring, animated } from "react-spring";
+import API from '../../utils/API'
+
+
 
 function App() {
+  const [venueData,setVenueData] = useState({
+    venue_name:"",
+    venue_address:"",
+    contact_phone:""
+  })
+  useEffect(() => {
+    console.log("formData", venueData)
+  }, [venueData])
+  
+const inviteSubmit = e=> {
+  e.preventDefault();
+  API.createVenue(venueData).then(result=> {
+    console.log("hello result",result)
+  })
+}
+
+
   const [ItineraryStatus, setItineraryStatus] = useState(false);
   const inviteProps = useSpring({ 
     left: ItineraryStatus ? -500 : 0, 
   });
   const itinerProps = useSpring({
-    left: ItineraryStatus ? 0 : 500, // Itinerary form sliding positions 
+    left: ItineraryStatus ? 0 : 500, // Itinerary venue sliding positions 
   });
 
 
@@ -51,7 +71,7 @@ function App() {
       </div>
       <div className="form-group">
         <animated.form action="" id="InvitationForm" style={inviteProps}>
-          <InvitationForm />
+          <InvitationForm venueData={venueData} setVenueData={setVenueData} inviteSubmit={inviteSubmit}/>
         </animated.form>
         <animated.form action="" id="ItineraryForm" style={itinerProps}>
           <ItineraryForm />
@@ -62,20 +82,25 @@ function App() {
   );
 }
 
-function InvitationForm() {
+function InvitationForm({venueData, setVenueData, inviteSubmit}) {
   return (
     <React.Fragment>
-      
+     
+
       <input type="text" placeholder="Where is your Destination?"/>
       <input type="week" placeholder="What's the date!?"/>
       <input type="number" placeholder="How many days?" />
       <input type="text" placeholder="Hotel to book"/>
-      <input type="text" placeholder="Venue Name"/>
+      <input name="venue_name" value={venueData.venue_name} onChange={e=> setVenueData({...venueData, venue_name:e.target.value})}type="text" placeholder="Venue Name"/>
+      <input name="venue_address" value={venueData.venue_address} onChange={e=> setVenueData({...venueData, venue_address:e.target.value})} type="text" placeholder="Venue Address"/>
+      <input name="venue_address" value={venueData.contact_phone} onChange={e=> setVenueData({...venueData, contact_phone:e.target.value})} type="text" placeholder="contact"/>
+      
       <input type="text" placeholder="Picture of the couple"/>
       <input type="text" placeholder="Pictures of the Destination"/>
       
       
-      <input type="submit" value="submit" className="submit" />
+      <input onClick = {inviteSubmit} type="submit" value="submit" className="submit" />
+    
     </React.Fragment>
   );
 }

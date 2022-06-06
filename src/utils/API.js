@@ -4,7 +4,10 @@ const BASE_URL="http://localhost:3001"
 //PROD
 // const BASE_URL="https://boardgames-back.herokuapp.com"
 
+const token = localStorage.getItem("token")
+
 module.exports = {
+    
     getAllUsers:()=>{
         return fetch(`${BASE_URL}/api/users`).then(res=>res.json())
     },
@@ -38,7 +41,8 @@ module.exports = {
             }
         }).then(res=>res.json())
     },
-    createVenue:(venueData,token)=>{
+    createVenue:(venueData)=>{
+        console.log("create venue")
         return fetch(`${BASE_URL}/api/venues`,{
             method:"POST",
             body:JSON.stringify(venueData),
@@ -79,7 +83,7 @@ module.exports = {
         return fetch(`${BASE_URL}/api/invites/${inviteId}`).then(res=>res.json())
     },
 
-    createInvite:(inviteData,token)=>{
+    createInvite:(inviteData)=>{
         return fetch(`${BASE_URL}/api/invites`,{
             method:"POST",
             body:JSON.stringify(inviteData),
@@ -94,7 +98,7 @@ module.exports = {
         return fetch(`${BASE_URL}/api/events/${eventId}`).then(res=>res.json())
     },
 
-    createEvent:(eventData,token)=>{
+    createEvent:(eventData)=>{
         return fetch(`${BASE_URL}/api/events`,{
             method:"POST",
             body:JSON.stringify(eventData),
