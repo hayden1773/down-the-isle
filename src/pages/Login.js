@@ -10,6 +10,14 @@ const LoginPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userId, setUserId] = useState(null);
   const [token,setToken] = useState(null)
+  const [loginData, setLoginData] = useState({
+    username:"",
+    password:""
+})
+const [signupData, setSignupData] = useState({
+    username:"",
+    password:""
+})
   useEffect(()=>{
     const savedToken = localStorage.getItem("token");
     if(savedToken){
@@ -34,12 +42,13 @@ const LoginPage = () => {
   },[token])
   const handleLoginSubmit=loginData =>{
     console.log("handle login",loginData)
-    API.login(loginData).then(data=>{
+    API.login(loginData).then(res=>res.json()).then(data=>{
+      console.log("datata",data)
       if(data.token){
         setToken(data.token)
         localStorage.setItem("token",data.token)
       }
-    })
+    }) 
   }
   const handleSignupSubmit=signupData =>{
     API.signup(signupData).then(data=>{
@@ -56,7 +65,7 @@ const LoginPage = () => {
   return (
     <div>
       {/* <Navbar/> */}
-      <Login login={handleLoginSubmit} signup={handleSignupSubmit}/>
+      <Login login={handleLoginSubmit} signup={handleSignupSubmit} signupData={signupData} loginData={loginData} setSignupData={setSignupData} setLoginData={setLoginData}/>
       {/* // <Footer /> */}
     </div>
   )

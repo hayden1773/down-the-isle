@@ -19,15 +19,17 @@ module.exports = {
         }).then(res=>res.json())
     },
     login:userData=>{
+        console.log("hello api???????")
         return fetch(`${BASE_URL}/api/users/login`,{
             method:"POST",
             body:JSON.stringify(userData),
             headers:{
                 "Content-Type":"application/json"
             }
-        }).then(res=>res.json())
+        })
     },
     signup:userData=>{
+        console.log("hello api???????")
         return fetch(`${BASE_URL}/api/users`,{
             method:"POST",
             body:JSON.stringify(userData),
