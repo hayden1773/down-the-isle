@@ -8,6 +8,10 @@ nav a.nav-link {
   #pagelogo {
     height: 140px;
   }
+
+  .navbar {
+    background-color: #9CAE68;
+  }
   
   
   nav ul li{
@@ -17,7 +21,9 @@ nav a.nav-link {
   .navbar-nav > li > a {
     margin-right: 0.75rem;
     margin-left: 0.75rem;
-  color: green !important;
+  color: white !important;
+  font-weight: bolder;
+  font-family: Comic-Sans-MS, Comic-Sans, cursive !important;
   border-top: 0.1875rem solid var(--primary-dark);
   }
   
@@ -28,12 +34,12 @@ nav a.nav-link {
   }
   
   .navbar-nav >li > a.active, .navbar-nav > li > a.active:focus {
-    border-top: 0.1875rem solid goldenrod;
+    border-top: 0.1875rem solid white;
   
   }
   
   .navbar-nav > li > a:hover {
-    border-top: 0.1875rem solid goldenrod;
+    border-top: 0.1875rem solid white;
   }
 
   .header-wrapper {

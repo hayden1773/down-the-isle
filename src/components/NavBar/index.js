@@ -1,11 +1,11 @@
 import React from "react"
 import './style.css'
-import logo from "../../assets/images/pagelogo.jpg"
+import logo from "../../assets/images/LOGO.JPG"
 import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white text-black">
+    <nav className="navbar navbar-expand-lg navbar-light text-black">
   <div className="container-fluid">
     {/* <a className="navbar-brand" href="#"><img src={logo} alt="logo...."/></a>  */}
     

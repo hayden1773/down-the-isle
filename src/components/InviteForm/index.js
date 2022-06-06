@@ -84,7 +84,7 @@ function ItineraryForm() {
   return (
     <React.Fragment>
       {/* input will link to how may days are selected */}
-      <input type="text" id="fullname" />
+      <input type="text" id="fullname" placeholder="full name"/>
       
       
       <input type="submit" value="submit" class="submit" />
