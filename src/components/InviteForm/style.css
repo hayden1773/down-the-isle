@@ -23,8 +23,10 @@ html,body, body * {
 
 
   .Invite-Itinerary-wrapper {
-      height: 630px;
+      height: 750px;
       width: 500px;
+      margin-top: 50px;
+      margin-bottom: 50px;
       margin-left: auto;
       margin-right: auto;
       padding:0 2em;
@@ -32,7 +34,8 @@ html,body, body * {
       box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
       overflow: hidden; 
       color: black;
-      background: linear-gradient(white, rgb(115, 153, 115), rgba(255,255,255,0));
+      background-image: url("https://t4.ftcdn.net/jpg/02/38/30/99/360_F_238309994_vZ2JRWRsG7RQ9HwQdpFat7iPkLHk2aen.jpg");
+      /* background: linear-gradient(white, #9CAE68, rgba(255,255,255,0)); */
   }
   
   /* Nav buttons */
@@ -57,8 +60,6 @@ html,body, body * {
       padding-bottom: 10px;
       border-bottom: solid 2px #b0078c;
   } 
-  
- 
 
     /* form styling */
     .form-group input {
@@ -86,7 +87,7 @@ html,body, body * {
         border: none;
         border-radius: 20px;
         margin-top: 23px;
-        background-color: green;
+        background-color: #9CAE68;
     
     }
 
@@ -98,13 +99,10 @@ html,body, body * {
         position:relative;
     }
 
-   
-
     form, .forgot-panel { 
         position: relative;
         transition: all .5s ease;
     }
     #inviteBtn, #itineraryBtn {
         transition: all .5s ease;
-
     }
