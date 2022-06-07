@@ -24,7 +24,7 @@ function Dashboard () {
     }}
      className="UserDash">
 
-      <h1>Dashboard</h1>
+      
       <div className='container'>
       <div className='row'>
         <div className='col'>
