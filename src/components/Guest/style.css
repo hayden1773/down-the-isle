@@ -26,7 +26,18 @@ h5 {
     outline: none;
     
   }
-  
+   button{
+       border: 2px solid white;
+       background-color: #9CAE68;
+       text-align: center;
+       color:white;
+       font-size: 20px;
+       padding: 10px !important;
+       width: 250px !important;
+       height: 50px !important;
+       margin-top: 40px !important;
+       border-radius: 12px;
+   }
   /* .srchList {
     background-color: #6DB8D1;
     border-radius: 5px;
