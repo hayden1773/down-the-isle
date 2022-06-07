@@ -6,6 +6,8 @@ import './style.css'
 
 
 function Guest() {
+ 
+
   return (
     <div>
         <h1>WELCOME TO DOWN THE ISLE</h1>

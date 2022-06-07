@@ -13,14 +13,55 @@ function App() {
     contact_phone:""
   })
   useEffect(() => {
-    console.log("formData", venueData)
+   //console.log("formData", venueData)
   }, [venueData])
+ 
+
+
+  const [hotelData,setHotelData] = useState({
+    hotel_name:"",
+    hotel_address:"",
+    contact_phone:""
+  })
+  useEffect(() => {
+    //console.log("hotel formData", hotelData)
+  }, [hotelData])
   
+
+
+  const [weddingData,setWeddingData] = useState({
+    wedding_date:"",
+    event_duration:"",
+  })
+  useEffect(() => {
+    //console.log("hotel formData", weddingData)
+  }, [weddingData])
+
+  const [inviteData,setInviteData] = useState({
+    guest_name:"",
+    guest_email:"",
+  })
+  useEffect(() => {
+    //console.log("hotel formData", weddingData)
+  }, [inviteData])
+
+
 const inviteSubmit = e=> {
   e.preventDefault();
   API.createVenue(venueData).then(result=> {
-    console.log("hello result",result)
+    console.log("hello venue result",result)
   })
+  
+  API.createHotel(hotelData).then(result=> {
+    console.log("hello hotel info",result)
+  })
+  API.createEvent(weddingData).then(result=> {
+    console.log("hello wedding info",result)
+  })
+  API.createInvite(inviteData).then(result=> {
+    console.log("hello invite info",result)
+  })
+
 }
 
 
@@ -71,7 +112,7 @@ const inviteSubmit = e=> {
       </div>
       <div className="form-group">
         <animated.form action="" id="InvitationForm" style={inviteProps}>
-          <InvitationForm venueData={venueData} setVenueData={setVenueData} inviteSubmit={inviteSubmit}/>
+          <InvitationForm venueData={venueData} setVenueData={setVenueData} hotelData={hotelData} setHotelData={setHotelData}  weddingData={weddingData} setWeddingData={setWeddingData} inviteData={inviteData} setInviteData={setInviteData} inviteSubmit={inviteSubmit}/>
         </animated.form>
         <animated.form action="" id="ItineraryForm" style={itinerProps}>
           <ItineraryForm />
@@ -82,21 +123,26 @@ const inviteSubmit = e=> {
   );
 }
 
-function InvitationForm({venueData, setVenueData, inviteSubmit}) {
+function InvitationForm({venueData, setVenueData, hotelData, setHotelData, inviteSubmit, weddingData, setWeddingData, inviteData, setInviteData}) {
   return (
     <React.Fragment>
      
 
       <input type="text" placeholder="Where is your Destination?"/>
-      <input type="week" placeholder="What's the date!?"/>
-      <input type="number" placeholder="How many days?" />
-      <input type="text" placeholder="Hotel to book"/>
+      <input name="wedding_date" value={weddingData.wedding_date} onChange={e=> setWeddingData({...weddingData, wedding_date:e.target.value})} type="text" placeholder="Wedding Date?"/>
+      <input name="hotel_name" value={hotelData.hotel_name} onChange={e=> setHotelData({...hotelData, hotel_name:e.target.value})}type="text" placeholder="Hotel Name"/>
+      <input name="hotel_address" value={hotelData.hotel_address} onChange={e=> setHotelData({...hotelData, hotel_address:e.target.value})} type="text" placeholder="Hotel Address"/>
+      <input name="contact_phone" value={hotelData.contact_phone} onChange={e=> setHotelData({...hotelData, contact_phone:e.target.value})} type="text" placeholder="Hotel Contact"/>
       <input name="venue_name" value={venueData.venue_name} onChange={e=> setVenueData({...venueData, venue_name:e.target.value})}type="text" placeholder="Venue Name"/>
       <input name="venue_address" value={venueData.venue_address} onChange={e=> setVenueData({...venueData, venue_address:e.target.value})} type="text" placeholder="Venue Address"/>
-      <input name="venue_address" value={venueData.contact_phone} onChange={e=> setVenueData({...venueData, contact_phone:e.target.value})} type="text" placeholder="contact"/>
+      <input name="contact_phone" value={venueData.contact_phone} onChange={e=> setVenueData({...venueData, contact_phone:e.target.value})} type="text" placeholder="contact"/>
+      <input name="event_duration" value={weddingData.event_duration} onChange={e=> setWeddingData({...weddingData, event_duration:e.target.value})} type="number" placeholder="How many days? "/>
+      <input name="guest_name" value={inviteData.guest_name} onChange={e=> setInviteData({...inviteData, guest_name:e.target.value})} type="text" placeholder="Guest Name # 1"/>
+      <input name="guest_email" value={inviteData.guest_email} onChange={e=> setInviteData({...inviteData, guest_email:e.target.value})} type="text" placeholder="Guest Email"/>
       
       <input type="text" placeholder="Picture of the couple"/>
       <input type="text" placeholder="Pictures of the Destination"/>
+
       
       
       <input onClick = {inviteSubmit} type="submit" value="submit" className="submit" />
