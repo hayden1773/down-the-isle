@@ -16,7 +16,7 @@ function InvitationPreview(){
         setwidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
     }, []);
     return(
-        <div className="Preview">
+        <div className="PreviewImg">
             <motion.div ref={carousel} className="carousel" whileTap={{cursor: "grabbing"}}>
                 <motion.div drag="x" dragConstraints={{right:0, left: -width}} className="inner-carousel">
                 {images.map(image => {
