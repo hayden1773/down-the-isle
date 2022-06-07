@@ -61,6 +61,7 @@ export default function Login({login, signup, loginData, signupData, setLoginDat
        <form>
             <input type="text" value={loginData.username} onChange={(e)=>setLoginData({...loginData,username:e.target.value})} placeholder="Enter username"/>
             <input type="password" value={loginData.password} onChange={(e)=>setLoginData({...loginData,password:e.target.value})} placeholder="Enter password"/>
+            
             <button type="submit" className="btn login">login</button>
             
             <hr/>

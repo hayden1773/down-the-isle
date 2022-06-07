@@ -11,18 +11,26 @@ import Dashboard from './pages/Dashboard'
 import CreateInvites from './pages/CreateInvites'
 import ViewInvites from './pages/ViewInvites'
 import Guest from './pages/Guest'
-
+import { useState } from "react";
 
 function App() {
+  const[isLoggedIn,setIsLoggedIn]=useState(false)
+  const[userId, setUserId]=useState(null)
+  const[token,setToken]=useState(null)
+  const logout=()=>{
+    setToken(null);
+    localStorage.removeItem("token");
+    isLoggedIn(false)
+  }
   
   return (
     <BrowserRouter>
-    <Navbar/>
+    <Navbar isLoggedIn={isLoggedIn} userId={userId} logout={logout}/>
     <Routes>
     <Route path='/' element={<Homepage/>}/>
-    <Route path='/login' element={<Login/>}/>
+    <Route path='/login' element={<Login setIsLoggedIn={setIsLoggedIn} setUserId={setUserId} setToken={setToken} token={token}/>}/>
     <Route path='/about' element={<About/>}/>
-    <Route path='/dashboard' element={<Dashboard/>}/>
+    <Route path='/dashboard/:userId' element={<Dashboard/>} />
     <Route path='/createinvites' element={<CreateInvites/>}/>
     <Route path='/guest' element={<Guest/>}/>
 

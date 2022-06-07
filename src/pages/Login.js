@@ -3,13 +3,15 @@ import { useEffect,useState } from "react";
 import API from "../utils/API"
 // import Navbar from "../components/NavBar/index"
 import Login from "../components/Login/index"
+import { useNavigate } from 'react-router-dom';
 // import Footer 
 
 
-const LoginPage = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userId, setUserId] = useState(null);
-  const [token,setToken] = useState(null)
+const LoginPage = ({setIsLoggedIn,setUserId,setToken,token}) => {
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [userId, setUserId] = useState(null);
+  // const [token,setToken] = useState(null)
+  const navigate = useNavigate()
   const [loginData, setLoginData] = useState({
     username:"",
     password:""
@@ -47,6 +49,9 @@ const [signupData, setSignupData] = useState({
       if(data.token){
         setToken(data.token)
         localStorage.setItem("token",data.token)
+        setIsLoggedIn(true)
+        setUserId(data.userId)
+        navigate(`/dashboard/${data.userId}`)
       }
     }) 
   }
@@ -55,6 +60,8 @@ const [signupData, setSignupData] = useState({
       if(data.token){
         setToken(data.token)
         localStorage.setItem("token",data.token)
+        setIsLoggedIn(true)
+        setUserId(data.userId)
       }
     })
   }
