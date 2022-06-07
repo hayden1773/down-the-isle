@@ -19,7 +19,7 @@ export default function Navbar(props) {
         <Link to={`/dashboard/${props.userId}`} className="nav-link " aria-current="page">Dashboard</Link>
         </li>
         <li className="nav-item ">
-        <Link to="/" className="nav-link " aria-current="page">Logout</Link>
+        <Link to="/" onClick={props.logout} className="nav-link " aria-current="page">Logout</Link>
         </li>
         </div>
         }

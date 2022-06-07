@@ -16,10 +16,15 @@ import { useState } from "react";
 function App() {
   const[isLoggedIn,setIsLoggedIn]=useState(true)
   const[userId, setUserId]=useState(null)
+  const[token,setToken]=useState(null)
+  const logout=()=>{
+    setToken(null);
+    localStorage.removeItem("token")
+  }
   
   return (
     <BrowserRouter>
-    <Navbar isLoggedIn={isLoggedIn} userId={userId}/>
+    <Navbar isLoggedIn={isLoggedIn} userId={userId} logout={logout}/>
     <Routes>
     <Route path='/' element={<Homepage/>}/>
     <Route path='/login' element={<Login/>}/>
