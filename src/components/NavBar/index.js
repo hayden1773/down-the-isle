@@ -16,7 +16,7 @@ export default function Navbar(props) {
       {props.isLoggedIn &&
         <div>
         <li className="nav-item ">
-        <Link to={`/dashboard/${props.userId}`} className="nav-link " aria-current="page">Dashboard</Link>
+        <Link to={`/dashboard/${props.userId}`}className="nav-link " aria-current="page">Dashboard</Link>
         </li>
         <li className="nav-item ">
         <Link to="/" onClick={props.logout} className="nav-link " aria-current="page">Logout</Link>
