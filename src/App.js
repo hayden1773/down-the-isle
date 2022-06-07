@@ -10,6 +10,7 @@ import Navbar from "./components/NavBar";
 import Dashboard from './pages/Dashboard'
 import CreateInvites from './pages/CreateInvites'
 import ViewInvites from './pages/ViewInvites'
+import Guest from './pages/Guest'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
     <Route path='/about' element={<About/>}/>
     <Route path='/dashboard' element={<Dashboard/>}/>
     <Route path='/createinvites' element={<CreateInvites/>}/>
+    <Route path='/guest' element={<Guest/>}/>
 
     {/* temp file */}
     <Route path='/viewinvites' element={<ViewInvites/>}/>

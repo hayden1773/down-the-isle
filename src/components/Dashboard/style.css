@@ -1,6 +1,6 @@
-/* body {
-    background-color: beige;
-} */
+body {
+    background: url("https://img.wallpapersafari.com/desktop/1280/1024/7/90/RniT37.jpg")
+}
 .container{
     display:grid;
     justify-content:center;
