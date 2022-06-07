@@ -17,7 +17,7 @@ function Guest() {
           </div>
           <div className="col-md-12 justify-content-md-center">
           </div>
-          <button>SUBMIT </button>
+          <button class="btn-guest">SUBMIT </button>
         </div>
       </div>
 </div>
