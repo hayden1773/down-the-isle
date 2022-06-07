@@ -12,7 +12,7 @@ const [isOpen, setIsOpen] = useState(false);
   return (
    <div className='Preview'>
        <motion.div transition={{layout:{duration: 1, type:"spring"}}} Layout onClick={() => setIsOpen(!isOpen)}className='card'>
-           <motion.h2 Layout="position">Invitation</motion.h2>
+           <motion.h2 Layout="position">Itinerary</motion.h2>
            {isOpen && (
            <motion.div>
                <p>lorem </p>
