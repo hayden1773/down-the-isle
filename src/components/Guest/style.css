@@ -38,6 +38,13 @@ h5 {
        margin-top: 40px !important;
        border-radius: 12px;
    }
+   button :hover{
+  cursor:pointer;
+  opacity: 1;
+    
+   }
+
+   
   /* .srchList {
     background-color: #6DB8D1;
     border-radius: 5px;

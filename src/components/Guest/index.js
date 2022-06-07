@@ -4,6 +4,7 @@ import './style.css'
 
 
 
+
 function Guest() {
   return (
     <div>
@@ -15,14 +16,10 @@ function Guest() {
             <input  type="text" placeHolder="Search by Couple's Name" />
           </div>
           <div className="col-md-12 justify-content-md-center">
-           
           </div>
-        
           <button>SUBMIT </button>
-        
         </div>
       </div>
-
 </div>
   )
 }
