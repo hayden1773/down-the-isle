@@ -11,13 +11,15 @@ import Dashboard from './pages/Dashboard'
 import CreateInvites from './pages/CreateInvites'
 import ViewInvites from './pages/ViewInvites'
 import Guest from './pages/Guest'
-
+import { useState } from "react";
 
 function App() {
+  const[isLoggedIn,setIsLoggedIn]=useState(true)
+  const[userId, setUserId]=useState(null)
   
   return (
     <BrowserRouter>
-    <Navbar/>
+    <Navbar isLoggedIn={isLoggedIn} userId={userId}/>
     <Routes>
     <Route path='/' element={<Homepage/>}/>
     <Route path='/login' element={<Login/>}/>
