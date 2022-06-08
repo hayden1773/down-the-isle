@@ -35,7 +35,7 @@ function App() {
     <Route path='/guest' element={<Guest/>}/>
 
     {/* temp file */}
-    <Route path='/viewinvites' element={<ViewInvites/>}/>
+    <Route path='/viewinvites' element={<ViewInvites userId={userId}/>}/>
     </Routes>
     </BrowserRouter>
   );

@@ -46,21 +46,21 @@ function App() {
   }, [inviteData])
 
 
-const inviteSubmit = e=> {
+const inviteSubmit = async e=> {
   e.preventDefault();
-  API.createVenue(venueData).then(result=> {
-    console.log("hello venue result",result)
-  })
-  
-  API.createHotel(hotelData).then(result=> {
-    console.log("hello hotel info",result)
-  })
-  API.createEvent(weddingData).then(result=> {
-    console.log("hello wedding info",result)
-  })
-  API.createInvite(inviteData).then(result=> {
-    console.log("hello invite info",result)
-  })
+  try {
+    const venue = await API.createVenue(venueData)
+    console.log({venue})
+    const hotel = await API.createHotel(hotelData)
+    console.log({hotel})
+    const event = await API.createEvent({...weddingData, HotelId: hotel.id, VenueId: venue.id})
+    console.log({event})
+    const invite = await API.createInvite({...inviteData, EventId: event.id})
+
+    console.log({invite});
+  }catch (err) {
+    console.log(err)
+  }
 
 }
 
