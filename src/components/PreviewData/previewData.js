@@ -7,8 +7,9 @@ import React from 'react'
 const PreviewData = () => {
 
 const [isOpen, setIsOpen] = useState(false);
+//const [userId, setUserId] = useState()
 
-    
+
   return (
    <div className='Preview'>
        <motion.div transition={{layout:{duration: 1, type:"spring"}}} Layout onClick={() => setIsOpen(!isOpen)}className='card'>
