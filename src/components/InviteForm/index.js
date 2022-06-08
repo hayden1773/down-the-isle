@@ -3,6 +3,7 @@ import React, { useState, useEffect} from "react";
 import "./style.css";
 import { useSpring, animated } from "react-spring";
 import API from '../../utils/API'
+import Cloud from '../Cloudinary/Cloud'
 
 
 
@@ -140,7 +141,7 @@ function InvitationForm({venueData, setVenueData, hotelData, setHotelData, invit
       <input name="guest_name" value={inviteData.guest_name} onChange={e=> setInviteData({...inviteData, guest_name:e.target.value})} type="text" placeholder="Guest Name # 1"/>
       <input name="guest_email" value={inviteData.guest_email} onChange={e=> setInviteData({...inviteData, guest_email:e.target.value})} type="text" placeholder="Guest Email"/>
       
-      <input type="text" placeholder="Picture of the couple"/>
+      <Cloud />
       <input type="text" placeholder="Pictures of the Destination"/>
 
       

@@ -1,4 +1,5 @@
 import React from 'react'
+
 // import Navbar from '../components/NavBar/index'
 
 
@@ -10,6 +11,7 @@ const CreateInvite = () => {
     <div>
    
       {/* <Navbar /> */}
+      
 
       <InviteForm />
      {/* Inject create invite component here */}
