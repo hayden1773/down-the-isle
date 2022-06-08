@@ -23,6 +23,12 @@ function App() {
     isLoggedIn(false)
   }
   
+  function findToken(currentToken) {
+    setToken(currentToken)
+  
+  }
+
+
   return (
     <BrowserRouter>
     <Navbar isLoggedIn={isLoggedIn} userId={userId} logout={logout}/>
@@ -35,7 +41,7 @@ function App() {
     <Route path='/guest' element={<Guest/>}/>
 
     {/* temp file */}
-    <Route path='/viewinvites' element={<ViewInvites userId={userId}/>}/>
+    <Route path='/viewinvites' element={<ViewInvites userId={userId} setUserId={setUserId} setToken={findToken} token={token}/>}/>
     </Routes>
     </BrowserRouter>
   );

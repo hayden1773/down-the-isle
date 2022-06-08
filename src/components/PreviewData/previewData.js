@@ -1,13 +1,69 @@
 import './style.css'
 import {motion} from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
+import API from '../../utils/API';
+import { useNavigate } from 'react-router-dom';
 
 import React from 'react'
 
-const PreviewData = () => {
+
+
+const PreviewData = ({userId, setUserId,setToken,token}) => {
+
+const navigate = useNavigate()
 
 const [isOpen, setIsOpen] = useState(false);
-//const [userId, setUserId] = useState()
+
+//const [user, setUser] = useState()
+
+const [InviteData, setInviteDAta] = useState({
+    wedding_data:"",
+    hotel_name:"",
+    hotel_address:"",
+    contact_phone:"",
+    venue_name:"",
+    venue_address:"",
+    contact_phone:"",
+    event_duration:"",
+    guest_name:"",
+    guest_email:""
+    
+})
+  useEffect(()=>{
+    const savedToken = localStorage.getItem("token");
+    if(savedToken){
+      setToken(savedToken)
+    }
+  },[])
+  useEffect(()=>{
+   if(token){
+      API.verify(token).then(userData=>{
+        if(userData.userId){
+          setUserId(userData.userId)
+          
+        } else {
+          setUserId(null)
+        }
+      })
+    }
+
+  },[token])
+
+useEffect(() => {
+    getUser();
+},[userId])
+
+  const getUser= async () =>{
+    try {
+        const currentUser =  await API.getOneUser(userId)
+        console.log("0000000000", currentUser)
+    }
+    catch(err) {
+            console.log(err)
+          }
+    }
+
+
 
 
   return (
@@ -16,7 +72,7 @@ const [isOpen, setIsOpen] = useState(false);
            <motion.h2 Layout="position">Invitation</motion.h2>
            {isOpen && (
            <motion.div>
-               <p>lorem </p>
+               <p>{} </p>
                <p>lorem</p>
            </motion.div>
            )}

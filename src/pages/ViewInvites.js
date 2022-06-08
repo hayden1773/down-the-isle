@@ -4,15 +4,23 @@ import React from 'react'
 import InvitationPreview from '../components/InvitationPreview/index'
 import PreviewData from '../components/PreviewData/previewData'
 import PreviewItinerary from '../components/PreviewItinerary/previewItinerary'
+//import {useState} from 'react'
 
-// import Footer 
 
 
-const Invite = () => {
+//const[token,setToken]=useState(null)
+
+const Invite = ({userId, setUserId,setToken,token}) => {
+  
+  function findToken(currentToken) {
+    setToken(currentToken)
+  
+  }
+
   return (
     <div>
       {/* <Navbar /> */}
-      <PreviewData /> <PreviewItinerary />
+      <PreviewData userId={userId} setUserId={setUserId} setToken={findToken} token={token} /> <PreviewItinerary />
       <InvitationPreview />
       
       {/* <Footer /> */}
