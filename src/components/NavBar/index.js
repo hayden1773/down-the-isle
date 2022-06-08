@@ -11,7 +11,7 @@ export default function Navbar(props) {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
-        <img className="logo" src={logo} id="pagelogo"/>
+        <img className="logo" src={logo} id="pagelogo" alt="logo"/>
         <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
       {props.isLoggedIn &&
         <div className="navbar-login">

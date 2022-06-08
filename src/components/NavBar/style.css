@@ -35,10 +35,10 @@ nav a.nav-link {
   color: white;
   font-weight: bolder;
   font-family: Comic-Sans-MS, Comic-Sans, cursive !important;
-  border-top: 0.1875rem solid var(--primary-dark);
+ 
   }
 
-  .navbar-logout{
+  .navbar-logout {
     display:flex;
     flex-direction: row;
     margin-right: 0.75rem;
