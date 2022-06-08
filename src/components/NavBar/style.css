@@ -1,8 +1,10 @@
-nav a.nav-link {
+nav >Link > nav-link {
     /* font-weight: 500; */
     letter-spacing:  0.0375rem;
     cursor: pointer;
-   
+    color: white;
+    
+  
   }
   
   #pagelogo {
