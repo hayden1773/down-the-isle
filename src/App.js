@@ -12,7 +12,6 @@ import CreateInvites from './pages/CreateInvites'
 import ViewInvites from './pages/ViewInvites'
 import Guest from './pages/Guest'
 import { useState } from "react";
-import axios from "axios";
 import  Mail from "./pages/Mail";
 
 function App() {
