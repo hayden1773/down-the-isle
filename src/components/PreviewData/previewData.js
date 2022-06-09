@@ -1,85 +1,82 @@
-import './style.css'
-import {motion} from 'framer-motion';
-import { useState, useEffect} from 'react';
-import API from '../../utils/API';
-import { useNavigate } from 'react-router-dom';
+import "./style.css";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import API from "../../utils/API";
+import { useNavigate } from "react-router-dom";
 
-import React from 'react'
+import React from "react";
 
+const currentUser = null;
 
+const PreviewData = ({ userId, setUserId, setToken, token }) => {
+  const navigate = useNavigate();
 
-const PreviewData = ({userId, setUserId,setToken,token}) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-const navigate = useNavigate()
+  //const [user, setUser] = useState()
 
-const [isOpen, setIsOpen] = useState(false);
-
-//const [user, setUser] = useState()
-
-const [InviteData, setInviteDAta] = useState({
-    wedding_data:"",
-    hotel_name:"",
-    hotel_address:"",
-    contact_phone:"",
-    venue_name:"",
-    venue_address:"",
-    contact_phone:"",
-    event_duration:"",
-    guest_name:"",
-    guest_email:""
-    
-})
-  useEffect(()=>{
+  const [InviteData, setInviteDAta] = useState({
+    wedding_data: "",
+    hotel_name: "",
+    hotel_address: "",
+    contact_phone: "",
+    venue_name: "",
+    venue_address: "",
+    contact_phone: "",
+    event_duration: "",
+    guest_name: "",
+    guest_email: "",
+  });
+  useEffect(() => {
     const savedToken = localStorage.getItem("token");
-    if(savedToken){
-      setToken(savedToken)
+    if (savedToken) {
+      setToken(savedToken);
     }
-  },[])
-  useEffect(()=>{
-   if(token){
-      API.verify(token).then(userData=>{
-        if(userData.userId){
-          setUserId(userData.userId)
-          
+  }, []);
+  useEffect(() => {
+    if (token) {
+      API.verify(token).then((userData) => {
+        if (userData.userId) {
+          setUserId(userData.userId);
         } else {
-          setUserId(null)
+          setUserId(null);
         }
-      })
+      });
     }
+  }, [token]);
 
-  },[token])
-
-useEffect(() => {
+  
+  useEffect(() => {
     getUser();
-},[userId])
+  }, [userId]);
 
-  const getUser= async () =>{
+  const getUser = async () => {
     try {
-        const currentUser =  await API.getOneUser(userId)
-        console.log("0000000000", currentUser)
+      let currentUser = await API.getOneUser(userId);
+      console.log("0000000000", currentUser);
+    } catch (err) {
+      console.log(err);
     }
-    catch(err) {
-            console.log(err)
-          }
-    }
-
-
-
+  };
 
   return (
-   <div className='Preview'>
-       <motion.div transition={{layout:{duration: 1, type:"spring"}}} Layout onClick={() => setIsOpen(!isOpen)}className='card'>
-           <motion.h2 Layout="position">Invitation</motion.h2>
-           {isOpen && (
-           <motion.div>
-               <p>{} </p>
-               <p>lorem</p>
-           </motion.div>
-           )}
-       </motion.div>
-   </div>
-   
-  )
-}
+    <div className="Preview">
+      <motion.div
+        transition={{ layout: { duration: 1, type: "spring" } }}
+        Layout
+        onClick={() => setIsOpen(!isOpen)}
+        className="card"
+      >
+        <motion.h2 Layout="position">Invitation</motion.h2>
+        {isOpen && (
+          <motion.div>
+            <p>{currentUser.Events[0].Hotel.hotel_name} </p>
+            <p>lorem</p>
+          </motion.div>
+        )}
+      </motion.div>
+    </div>
+  );
+};
 
-export default PreviewData
+export default PreviewData;
