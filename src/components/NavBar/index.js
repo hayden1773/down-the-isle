@@ -14,6 +14,7 @@ export default function Navbar(props) {
         <img className="logo" src={logo} id="pagelogo" alt="logo"/>
         <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
       {props.isLoggedIn &&
+      
         <div className="navbar-login">
         <li className="nav-item ">
         <Link to={`/dashboard/${props.userId}`}className="nav-link " aria-current="page">Dashboard</Link>

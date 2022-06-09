@@ -34,7 +34,7 @@ function App() {
     <Route path='/about' element={<About/>}/>
     <Route path='/dashboard/:userId' element={<Dashboard/>} />
     <Route path='/createinvites' element={<CreateInvites/>}/>
-    <Route path='/mailer' element={<Mail/>}/>
+    <Route path='/mail' element={<Mail/>}/>
     <Route path='/guest' element={<Guest/>}/>
 
     {/* temp file */}

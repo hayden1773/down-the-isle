@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Mailer from '../components/Mailer/index'
+import Mail from '../components/Mailer/index'
 
 
 const MailPage = () => {
   return (
     <div>
      
-      <Mailer/>
+      <Mail/>
     </div>
   )
 }
