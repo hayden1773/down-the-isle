@@ -6,7 +6,7 @@ function About() {
         <div className="container" id="aboutUs">
             <h1>Why Choose Us?</h1>
             <br/>
-            <p>Here at Down the Isle, we offer couples a simplistic, easy, and stress-free way to plan and create their celebration of love.</p>
+            <p>Here at Down the Isle, we offer couples a simplistic, easy, and stress-free way to create and send invitations for guests of their celebration of love. </p>
             <br/>
             <div className="container" id="about">
                 <ul><img className="rounded-circle image1" alt="img1" src="https://withjoy.com/blog/wp-content/uploads/2021/07/Photo-1-1170x781.jpg"/>
