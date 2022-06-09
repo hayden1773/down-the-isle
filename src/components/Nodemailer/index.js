@@ -17,7 +17,7 @@ function SendingEmail() {
             {!sent ? (               
             <form onSubmit={handleSend}>
             <input type="text" value={text} onChange={(e)=>setText(e.target.value)}/>
-            <button type="submit">Send Email</button>
+            <button  onClick="" type="submit">Send Email</button>
             <h1>Hello</h1>
         </form>
         ):(
