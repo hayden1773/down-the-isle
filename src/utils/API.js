@@ -41,7 +41,7 @@ module.exports = {
             }
         }).then(res=>res.json())
     },
-    createVenue:(venueData)=>{
+    createVenue:(venueData, token)=>{
         console.log("create venue")
         return fetch(`${BASE_URL}/api/venues`,{
             method:"POST",
