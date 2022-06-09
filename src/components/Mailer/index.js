@@ -17,6 +17,7 @@ function SendEmail() {
     }
     return (
         <div>
+            <h1>CONTACT YOUR GUEST TO JOIN YOUR SPECIAL DAY</h1>
             <div className="container">
                 <form ref={form} onSubmit={submitEmail}>
                     <div className="row pt-5 mx-auto">

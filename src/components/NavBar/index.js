@@ -22,6 +22,9 @@ export default function Navbar(props) {
         <li className="nav-item ">
         <Link to="/" onClick={props.logout} className="nav-link " aria-current="page">Logout</Link>
         </li>
+        <li className="nav-item ">
+        <Link to="/mail"  className="nav-link " aria-current="page">Contact your guest</Link>
+        </li>
         </div>
        
         }
