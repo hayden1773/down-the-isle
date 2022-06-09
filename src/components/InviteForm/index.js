@@ -8,6 +8,14 @@ import Cloud from '../Cloudinary/Cloud'
 
 
 function App() {
+
+  const [token, setToken] = useState()
+  useEffect(() => {
+    
+    const token = localStorage.getItem("token")
+    setToken(token)
+   }, [])
+
   const [venueData,setVenueData] = useState({
     venue_name:"",
     venue_address:"",
@@ -28,7 +36,6 @@ function App() {
     //console.log("hotel formData", hotelData)
   }, [hotelData])
   
-
 
   const [weddingData,setWeddingData] = useState({
     wedding_date:"",
@@ -54,7 +61,7 @@ const inviteSubmit = async e=> {
     console.log({venue})
     const hotel = await API.createHotel(hotelData)
     console.log({hotel})
-    const event = await API.createEvent({...weddingData, HotelId: hotel.id, VenueId: venue.id})
+    const event = await API.createEvent({...weddingData, HotelId: hotel.id, VenueId: venue.id}, token)
     console.log({event})
     const invite = await API.createInvite({...inviteData, EventId: event.id})
 

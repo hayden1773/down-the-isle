@@ -13,8 +13,9 @@ const PreviewData = ({ userId, setUserId, setToken, token }) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  //const [user, setUser] = useState()
+  const [user, setUser] = useState()
 
+ 
   const [InviteData, setInviteDAta] = useState({
     wedding_data: "",
     hotel_name: "",
@@ -53,6 +54,7 @@ const PreviewData = ({ userId, setUserId, setToken, token }) => {
   const getUser = async () => {
     try {
       let currentUser = await API.getOneUser(userId);
+      setUser(currentUser)
       console.log("0000000000", currentUser);
     } catch (err) {
       console.log(err);
@@ -61,17 +63,26 @@ const PreviewData = ({ userId, setUserId, setToken, token }) => {
 
   return (
     <div className="Preview">
+      
       <motion.div
         transition={{ layout: { duration: 1, type: "spring" } }}
         Layout
         onClick={() => setIsOpen(!isOpen)}
         className="card"
       >
+        <h4>Hello {user&& user.username}</h4>
         <motion.h2 Layout="position">Invitation</motion.h2>
         {isOpen && (
           <motion.div>
-            <p>{currentUser.Events[0].Hotel.hotel_name} </p>
-            <p>lorem</p>
+            <p>Wedding Date: {user&& user.Events[0].wedding_date} </p>
+
+            <p>Wedding Venue: {user&& user.Events[0].Venue.venue_name} </p>
+            <p>Address: {user&& user.Events[0].Venue.venue_address} </p>
+            <p>Hotel to Book: {user&& user.Events[0].Hotel.hotel_name} </p>
+            <p>Hotel Address: {user&& user.Events[0].Hotel.hotel_address} </p>
+            <p>Hotel Contact: {user&& user.Events[0].Hotel.contact_phone} </p>
+            <h4>Guest List:</h4>
+            {/* <p>{user&& user.Events[0].Invites[0].guest_name}</p> */}
           </motion.div>
         )}
       </motion.div>
