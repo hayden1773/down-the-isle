@@ -6,10 +6,12 @@
 
   #aboutUs h1 {
     font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
 
   #aboutUs h3 {
     color: #9CAE68;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
   #aboutUs p {
@@ -19,6 +21,7 @@
     background-color: lightgoldenrodyellow;
     border-radius: 20px;
     opacity: .8;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   
   .image1 {
