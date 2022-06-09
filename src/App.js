@@ -12,7 +12,8 @@ import CreateInvites from './pages/CreateInvites'
 import ViewInvites from './pages/ViewInvites'
 import Guest from './pages/Guest'
 import { useState } from "react";
-import  Mail from "./pages/Mail";
+import Mail from './pages/Mail'
+
 
 function App() {
   const[isLoggedIn,setIsLoggedIn]=useState(false)
