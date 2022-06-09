@@ -17,14 +17,18 @@ function SendEmail() {
     }
     return (
         <div>
+            <h1>CONTACT YOUR GUEST TO JOIN YOUR SPECIAL DAY</h1>
             <div className="container">
                 <form ref={form} onSubmit={submitEmail}>
                     <div className="row pt-5 mx-auto">
                         <div className="col-8 form-group mx-auto">
-                            <input type="text" className="form-control" placeholder="name" name="name" />
+                            <input type="text" className="form-control" placeholder="Your Guest's name" name="name" />
                         </div>
                         <div className="col-8 form-group mx-auto">
-                            <input type="email" className="form-control" placeholder="Email Address" name="email" />
+                            <input type="email" className="form-control" placeholder=" Your Guest's Email Address" name="email" />
+                        </div>
+                        <div className="col-8 form-group mx-auto">
+                            <input type="email" className="form-control" placeholder=" Reply to Email Address" name="reply_to" />
                         </div>
                         <div className="col-8 form-group mx-auto">
                             <input type="text" className="form-control" placeholder="Subject" name="subject" />

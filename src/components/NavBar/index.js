@@ -5,15 +5,16 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar(props) {
   return (
+    
     <nav className="navbar navbar-expand-lg navbar-light text-white">
     <div className="container-fluid">
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button  className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <img className="logo" src={logo} id="pagelogo" alt="logo"/>
         <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
-      {props.isLoggedIn && 
+    {props.isLoggedIn && 
         <div className="navbar-login">
         <li className="nav-item ">
         <Link to={`/dashboard/${props.userId}`}className="nav-link " aria-current="page">Dashboard</Link>
@@ -21,8 +22,13 @@ export default function Navbar(props) {
         <li className="nav-item ">
         <Link to="/" onClick={props.logout} className="nav-link " aria-current="page">Logout</Link>
         </li>
+        <li className="nav-item ">
+        <Link to="/mail"  className="nav-link " aria-current="page">Contact your guest</Link>
+        </li>
         </div>
+       
         }
+
            
         {!props.isLoggedIn &&
         <div className="navbar-logout text-white">
@@ -37,12 +43,12 @@ export default function Navbar(props) {
         </li>
         </div>
 }
-
-      </ul>
-     
+      </ul>     
     </div>
+
   </div>
 </nav>
+
 
   )
 }

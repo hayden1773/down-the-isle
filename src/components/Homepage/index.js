@@ -28,7 +28,7 @@ function Homepage() {
       
     <h1>DOWN THE ISLE</h1>
     <div className="main-buttons">
-    <a href="#"  className="btn-start bg-black text-white" target="_blank" rel="noopener noreferrer">Let's go!</a>
+    <a href="/login"  className="btn-start bg-white text-black" >Let's go!</a>
     {/* <a href="#"  className="btn-find bg-black text-white" target="_blank" rel="noopener noreferrer">Find a couple</a> */}
     </div>
     </div>
