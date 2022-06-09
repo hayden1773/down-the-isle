@@ -4,7 +4,7 @@ import "./style.css"
 function About() {
     return (
         <div className="container" id="aboutUs">
-            <h1>Why Choose Us?</h1>
+            <h1>About Us</h1>
             <br/>
             <h3>Here at Down-the-Isle, we offer couples a simplistic, and stress-free way to create and send invitations for guests of their celebration of love.</h3>
             <br/>
