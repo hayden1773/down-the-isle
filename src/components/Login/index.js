@@ -27,12 +27,12 @@ export default function Login({
     console.log("seval is here to marry", signupData)
     signup(signupData);
     
-    // setSignupData({
-    //   username: "",
-    //   password: "",
-    // }).then((data) => {
-    //   console.log(data, "this is hayden from sign in");
-    // });
+    setSignupData({
+      username: "",
+      password: "",
+    }).then((data) => {
+      console.log(data, "this is hayden from sign in");
+    });
   };
 
   return (
