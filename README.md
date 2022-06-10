@@ -27,25 +27,32 @@ THEN THEN I am presented with the corresponding section below the navigation
 ```
 
 ## Technologies Used
-- React Bootstrap 
-- Framer Motion
+- Axios
+- CSS
 - Cloudinary
 - Emailjs
-- React-Spring
-- MySQL
 - Express
-
+- Framer Motion
+- HTML
+- JavaScript
+- MySQL
+- React
+- React Bootstrap 
+- React-Spring
+- Sequelize
 
 ## Future Development 
+- 
 
 ## Screenshots
+- ![]()
+- ![]()
 
 ## Contributors 
 - [Hayden Kiltoff](https://github.com/hayden1773)
 - [Seval Cakir](https://github.com/sevalc)
 - [Daniela Velarde](https://github.com/davelarde)
 - [Kristina Pang](https://github.com/KVPang)
-
 
 ## Links 
 
