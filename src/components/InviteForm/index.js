@@ -8,7 +8,7 @@ import Cloud from '../Cloudinary/Cloud'
 
 
 
-function App() {
+function InviteForm() {
 
   const [token, setToken] = useState()
   useEffect(() => {
@@ -64,7 +64,7 @@ const inviteSubmit = async e=> {
     console.log({hotel})
     const event = await API.createEvent({...weddingData, HotelId: hotel.id, VenueId: venue.id}, token)
     console.log({event})
-    const invite = await API.createInvite({...inviteData, EventId: event.id})
+    const invite = await API.createInvite({...inviteData, EventId: event.id}, token)
 
     console.log({invite});
   }catch (err) {
@@ -88,15 +88,15 @@ const inviteSubmit = async e=> {
       ? "solid 0px transparent"
       : "solid 2px #1059FF",  //Animate bottom border of Invitation button
   });
-  const itinBtnProps = useSpring({
-    borderBottom: ItineraryStatus
-      ? "solid 2px #1059FF"
-      : "solid 0px transparent", //Animate bottom border of Itinerary button
-  });
+  // const itinBtnProps = useSpring({
+  //   borderBottom: ItineraryStatus
+  //     ? "solid 2px #1059FF"
+  //     : "solid 0px transparent", //Animate bottom border of Itinerary button
+  // });
 
-  function itineraryClicked() {
-    setItineraryStatus(true);
-  }
+  // function itineraryClicked() {
+  //   setItineraryStatus(true);
+  // }
   function InviteClicked() {
     setItineraryStatus(false);
   }
@@ -111,21 +111,21 @@ const inviteSubmit = async e=> {
         >
           Invitation
         </animated.button>
-        <animated.button
+        {/* <animated.button
           onClick={itineraryClicked}
           id="itineraryBtn"
           style={itinBtnProps}
         >
           Itinerary
-        </animated.button>
+        </animated.button> */}
       </div>
       <div className="form-group">
         <animated.form action="" id="InvitationForm" style={inviteProps}>
           <InvitationForm venueData={venueData} setVenueData={setVenueData} hotelData={hotelData} setHotelData={setHotelData}  weddingData={weddingData} setWeddingData={setWeddingData} inviteData={inviteData} setInviteData={setInviteData} inviteSubmit={inviteSubmit}/>
         </animated.form>
-        <animated.form action="" id="ItineraryForm" style={itinerProps}>
+        {/* <animated.form action="" id="ItineraryForm" style={itinerProps}>
           <ItineraryForm />
-        </animated.form>
+        </animated.form> */}
       </div>
       
     </div>
@@ -160,16 +160,16 @@ function InvitationForm({venueData, setVenueData, hotelData, setHotelData, invit
   );
 }
 
-function ItineraryForm() {
-  return (
-    <React.Fragment>
-      {/* input will link to how may days are selected */}
-      <input type="text" id="fullname" placeholder="full name"/>
+// function ItineraryForm() {
+//   return (
+//     <React.Fragment>
+//       {/* input will link to how may days are selected */}
+//       <input type="text" id="fullname" placeholder="full name"/>
       
       
-      <input type="submit" value="submit" class="submit" />
-    </React.Fragment>
-  );
-}
+//       <input type="submit" value="submit" class="submit" />
+//     </React.Fragment>
+//   );
+// }
 
-export default App;
+export default InviteForm;
