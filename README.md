@@ -1,6 +1,7 @@
 # Down-the-Isle
 
 ## Description 
+Our application is intended to help users create and manage wedding invitations and allows for wedding guests to contact the wedding party via email.
 
 ## User Story
 ``` 
@@ -23,7 +24,6 @@ THEN I am taken to my dashboard
 
 WHEN I click on a title on the navigation bar
 THEN THEN I am presented with the corresponding section below the navigation 
-
 ```
 
 ## Technologies Used
