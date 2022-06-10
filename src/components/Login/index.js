@@ -24,7 +24,7 @@ export default function Login({
 
   const signupSubmit = (e) => {
     e.preventDefault();
-    console.log("seval is here to marry", signupData)
+    console.log("seval is married", signupData)
     signup(signupData);
     
     setSignupData({
