@@ -2,6 +2,7 @@ import React from 'react'
 import './style.css'
 import { useEffect,useState } from "react";
 import API from "../../utils/API.js"
+import {Link} from 'react-router-dom'
 
 function Homepage() {
   // const [users, setUsers] = useState([])
@@ -26,10 +27,9 @@ function Homepage() {
       </h1>
       <h2>{users[0].username}</h2> */}
       
-    <h1>DOWN THE ISLE</h1>
+    <h1>SHARE YOUR SPECIAL DAY</h1>
     <div className="main-buttons">
-    <a href="/login"  className="btn-start bg-white text-black" >Let's go!</a>
-    {/* <a href="#"  className="btn-find bg-black text-white" target="_blank" rel="noopener noreferrer">Find a couple</a> */}
+    <Link to="/login"  className="btn-start bg-white text-black" >Let's go!</Link>
     </div>
     </div>
     </div>

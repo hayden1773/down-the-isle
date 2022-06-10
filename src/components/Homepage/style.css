@@ -10,12 +10,13 @@
     display: flex;
     position: absolute;
     color:#9CAE68;
+    font-weight: bolder;
     top:0;
     left:0;
     right:0;
     bottom:0;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     text-align: center;
     font-family: "Roboto Condesed"sans-serif;
@@ -45,14 +46,7 @@
   
   }
   
-  .btn-find {
-    display: inline-flex;
-    border:1px solid ;
-    text-transform: uppercase;
-    border-radius: 0;
-    padding:10px 12px 12px 12px !important;
-    color: beige;
-  }
+  
   
   .btn-resume :hover {
     text-decoration: none;
