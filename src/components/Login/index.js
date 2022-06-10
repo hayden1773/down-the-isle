@@ -24,15 +24,15 @@ export default function Login({
 
   const signupSubmit = (e) => {
     e.preventDefault();
-    console.log("seval is here to marry", signupData)
+    console.log("seval is married", signupData)
     signup(signupData);
     
-    // setSignupData({
-    //   username: "",
-    //   password: "",
-    // }).then((data) => {
-    //   console.log(data, "this is hayden from sign in");
-    // });
+    setSignupData({
+      username: "",
+      password: "",
+    }).then((data) => {
+      console.log(data, "this is hayden from sign in");
+    });
   };
 
   return (

@@ -83,7 +83,7 @@ module.exports = {
         return fetch(`${BASE_URL}/api/invites/${inviteId}`).then(res=>res.json())
     },
 
-    createInvite:(inviteData)=>{
+    createInvite:(inviteData, token)=>{
         return fetch(`${BASE_URL}/api/invites`,{
             method:"POST",
             body:JSON.stringify(inviteData),
@@ -98,7 +98,7 @@ module.exports = {
         return fetch(`${BASE_URL}/api/events/${eventId}`).then(res=>res.json())
     },
 
-    createEvent:(eventData)=>{
+    createEvent:(eventData, token)=>{
         return fetch(`${BASE_URL}/api/events`,{
             method:"POST",
             body:JSON.stringify(eventData),
