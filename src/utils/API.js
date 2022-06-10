@@ -1,6 +1,6 @@
 
 //DEVELOP
-const BASE_URL="http://localhost:3001"
+const BASE_URL="https://at-the-altar.herokuapp.com"
 //PROD
 // const BASE_URL="https://boardgames-back.herokuapp.com"
 
