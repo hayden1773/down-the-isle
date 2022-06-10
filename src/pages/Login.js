@@ -57,11 +57,13 @@ const [signupData, setSignupData] = useState({
   }
   const handleSignupSubmit=signupData =>{
     API.signup(signupData).then(data=>{
+      console.log(" sign up", data)
       if(data.token){
         setToken(data.token)
         localStorage.setItem("token",data.token)
         setIsLoggedIn(true)
         setUserId(data.userId)
+        navigate(`/dashboard/${data.userId}`)
       }
     })
   }
