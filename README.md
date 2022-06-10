@@ -10,6 +10,21 @@ THEN our guests will have a glimpse of how extravagant our big day will be
 ```
 
 ## Acceptance Criteria
+```
+GIVEN I open the web page for Down-the-Isle
+WHEN I select 'Let's Go!' on the main page 
+THEN I am presented with a login and sign up form
+
+WHEN I select sign-up on the sign-up form
+THEN I can enter my username and password and submit 
+
+WHEN I enter my username and password on the login form
+THEN I am taken to my dashboard 
+
+WHEN I click on a title on the navigation bar
+THEN THEN I am presented with the corresponding section below the navigation 
+
+```
 
 ## Technologies Used
 - React Bootstrap 
