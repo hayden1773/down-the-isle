@@ -20,7 +20,8 @@ const Invite = ({userId, setUserId,setToken,token}) => {
   return (
     <div>
       {/* <Navbar /> */}
-      <PreviewData userId={userId} setUserId={setUserId} setToken={findToken} token={token} /> <PreviewItinerary />
+      <PreviewData userId={userId} setUserId={setUserId} setToken={findToken} token={token} /> 
+      {/* <PreviewItinerary /> */}
       <InvitationPreview />
       
       {/* <Footer /> */}

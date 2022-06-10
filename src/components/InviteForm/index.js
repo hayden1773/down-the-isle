@@ -4,6 +4,7 @@ import "./style.css";
 import { useSpring, animated } from "react-spring";
 import API from '../../utils/API'
 import Cloud from '../Cloudinary/Cloud'
+//import { Link } from 'react-router-dom'
 
 
 
