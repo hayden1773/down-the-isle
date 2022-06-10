@@ -1,10 +1,11 @@
 body {
     background: url("https://img.wallpapersafari.com/desktop/1280/1024/7/90/RniT37.jpg")
 }
+
+/* Dashboard Menu Cards */
 .container{
     display:grid;
     justify-content:center;
-    
 }
 
 .createInvite, .viewInvite, .Itinerary, .guestList {
@@ -26,14 +27,19 @@ body {
       background: url("https://cdn.pizap.com/pizapfiles/images/wedding_invitation_maker_app04.jpg");
       background-position:cover;
       background-repeat: no-repeat;
+      opacity: .6;      font-size: 40px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
       color: darkgoldenrod;
       }
-  
+
 
   .viewInvite{
       background:url("https://www.nyongesasande.com/wp-content/uploads/2021/12/Wedding-invitations.jpg");
       background-position:cover;
       background-repeat: no-repeat;
+      opacity: .6;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 40px;
       color: white;
       }
 
@@ -41,15 +47,24 @@ body {
       background: url("https://www.theknot.com/tk-media/images/d4b59b24-b6dc-11e4-be0a-22000aa61a3e~rs_1458.h?quality=60");
       background-position:center;
       background-repeat: no-repeat;
+      opacity: .6;
+      font-size: 40px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
       color: white;
     }
   .guestList{
       background: url("https://junebugweddings.com/wedding-blog/wp-content/uploads/2017/04/Charlie-Dan-The-Stars-Inside-6.jpeg");
       background-position:center;
       background-repeat: no-repeat;
+      opacity: .6;
+      font-size: 40px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
       color: white;
   }
 
+  .createInvite:hover, .viewInvite:hover, .Itinerary:hover, guestList:hover{
+    opacity: 1;
+}
 
 .createInvite:hover, .viewInvite:hover, .Itinerary:hover, .guestList:hover  {
     background-color: green;
