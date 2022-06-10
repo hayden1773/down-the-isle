@@ -1,0 +1,18 @@
+.Preview {
+    min-height: 50%;
+    display: flex;
+    justify-content: left;
+    margin: 4rem;
+    align-items: center;
+}  
+
+
+ .card {
+    background: whitesmoke;
+    padding: 3rem 5rem;
+}
+
+.card p{
+ padding-top:1rem;
+ line-height: 150%;
+}

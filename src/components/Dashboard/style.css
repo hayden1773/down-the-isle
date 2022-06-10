@@ -1,0 +1,56 @@
+body {
+    background: url("https://img.wallpapersafari.com/desktop/1280/1024/7/90/RniT37.jpg")
+}
+.container{
+    display:grid;
+    justify-content:center;
+    
+}
+
+.createInvite, .viewInvite, .Itinerary, .guestList {
+    position:relative;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgb(107, 156, 107);
+    /* background-color: #9CAE68; */
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    font-size: xx-large;
+    color: white;
+    width: 500px;
+    height: 240px;
+  }
+
+  .createInvite{
+      background: url("https://cdn.pizap.com/pizapfiles/images/wedding_invitation_maker_app04.jpg");
+      background-position:cover;
+      background-repeat: no-repeat;
+      color: darkgoldenrod;
+      }
+  
+
+  .viewInvite{
+      background:url("https://www.nyongesasande.com/wp-content/uploads/2021/12/Wedding-invitations.jpg");
+      background-position:cover;
+      background-repeat: no-repeat;
+      color: white;
+      }
+
+  .Itinerary{
+      background: url("https://www.theknot.com/tk-media/images/d4b59b24-b6dc-11e4-be0a-22000aa61a3e~rs_1458.h?quality=60");
+      background-position:center;
+      background-repeat: no-repeat;
+      color: white;
+    }
+  .guestList{
+      background: url("https://junebugweddings.com/wedding-blog/wp-content/uploads/2017/04/Charlie-Dan-The-Stars-Inside-6.jpeg");
+      background-position:center;
+      background-repeat: no-repeat;
+      color: white;
+  }
+
+
+.createInvite:hover, .viewInvite:hover, .Itinerary:hover, .guestList:hover  {
+    background-color: green;
+}
