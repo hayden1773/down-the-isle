@@ -21,6 +21,8 @@ body {
     color: white;
     width: 500px;
     height: 240px;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
   }
 
   .createInvite{
@@ -62,7 +64,8 @@ body {
       color: white;
   }
 
-  .createInvite:hover, .viewInvite:hover, .Itinerary:hover, guestList:hover{
+  /*  On hover, card opacity is off */
+  .createInvite:hover, .viewInvite:hover, .Itinerary:hover, .guestList:hover{
     opacity: 1;
 }
 
