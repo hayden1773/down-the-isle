@@ -12,14 +12,16 @@ body{
 .form-modal{
     position:relative;
     width:450px;
+    padding: 10px;
     height:auto;
     margin-top:4em;
     left:50%;
     transform:translateX(-50%);
     background:#fff;
-    border-top-right-radius: 20px;
+    border-radius: 10px;
+    /* border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-right-radius: 20px; */
     box-shadow:0 3px 20px 0px rgba(0, 0, 0, 0.1)
 }
 
