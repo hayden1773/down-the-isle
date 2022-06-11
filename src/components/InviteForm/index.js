@@ -123,7 +123,6 @@ function InvitationForm({venueData, setVenueData, hotelData, setHotelData, invit
       <input name="guest_email" value={inviteData.guest_email} onChange={e=> setInviteData({...inviteData, guest_email:e.target.value})} type="text" placeholder="Guest Email"/>
       
       <Cloud />
-      <input type="text" placeholder="Pictures of the Destination"/>
       <input onClick = {inviteSubmit} type="submit" value="submit" className="submit" />
     
     </React.Fragment>
