@@ -2,14 +2,14 @@ import "./style.css";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import API from "../../utils/API";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 import React from "react";
 
 const currentUser = null;
 
 const PreviewData = ({ userId, setUserId, setToken, token }) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [isOpen, setIsOpen] = useState(false);
 

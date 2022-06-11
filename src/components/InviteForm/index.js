@@ -1,13 +1,10 @@
-
 import React, { useState, useEffect} from "react";
 import "./style.css";
 import { useSpring, animated } from "react-spring";
 import API from '../../utils/API'
 import Cloud from '../Cloudinary/Cloud'
-//import { Link } from 'react-router-dom'
 
-
-
+// Invite form functionality
 function InviteForm() {
 
   const [token, setToken] = useState()
@@ -23,10 +20,8 @@ function InviteForm() {
     contact_phone:""
   })
   useEffect(() => {
-   //console.log("formData", venueData)
   }, [venueData])
  
-
 
   const [hotelData,setHotelData] = useState({
     hotel_name:"",
@@ -34,7 +29,6 @@ function InviteForm() {
     contact_phone:""
   })
   useEffect(() => {
-    //console.log("hotel formData", hotelData)
   }, [hotelData])
   
 
@@ -43,7 +37,6 @@ function InviteForm() {
     event_duration:"",
   })
   useEffect(() => {
-    //console.log("hotel formData", weddingData)
   }, [weddingData])
 
   const [inviteData,setInviteData] = useState({
@@ -51,7 +44,6 @@ function InviteForm() {
     guest_email:"",
   })
   useEffect(() => {
-    //console.log("hotel formData", weddingData)
   }, [inviteData])
 
 
@@ -70,9 +62,7 @@ const inviteSubmit = async e=> {
   }catch (err) {
     console.log(err)
   }
-
 }
-
 
   const [ItineraryStatus, setItineraryStatus] = useState(false);
   const inviteProps = useSpring({ 
@@ -88,15 +78,8 @@ const inviteSubmit = async e=> {
       ? "solid 0px transparent"
       : "solid 2px #1059FF",  //Animate bottom border of Invitation button
   });
-  // const itinBtnProps = useSpring({
-  //   borderBottom: ItineraryStatus
-  //     ? "solid 2px #1059FF"
-  //     : "solid 0px transparent", //Animate bottom border of Itinerary button
-  // });
 
-  // function itineraryClicked() {
-  //   setItineraryStatus(true);
-  // }
+
   function InviteClicked() {
     setItineraryStatus(false);
   }
@@ -111,32 +94,22 @@ const inviteSubmit = async e=> {
         >
           Invitation
         </animated.button>
-        {/* <animated.button
-          onClick={itineraryClicked}
-          id="itineraryBtn"
-          style={itinBtnProps}
-        >
-          Itinerary
-        </animated.button> */}
+
       </div>
       <div className="form-group">
         <animated.form action="" id="InvitationForm" style={inviteProps}>
           <InvitationForm venueData={venueData} setVenueData={setVenueData} hotelData={hotelData} setHotelData={setHotelData}  weddingData={weddingData} setWeddingData={setWeddingData} inviteData={inviteData} setInviteData={setInviteData} inviteSubmit={inviteSubmit}/>
         </animated.form>
-        {/* <animated.form action="" id="ItineraryForm" style={itinerProps}>
-          <ItineraryForm />
-        </animated.form> */}
       </div>
       
     </div>
   );
 }
 
+// Invitation Form 
 function InvitationForm({venueData, setVenueData, hotelData, setHotelData, inviteSubmit, weddingData, setWeddingData, inviteData, setInviteData}) {
   return (
     <React.Fragment>
-     
-
       <input type="text" placeholder="Where is your Destination?"/>
       <input name="wedding_date" value={weddingData.wedding_date} onChange={e=> setWeddingData({...weddingData, wedding_date:e.target.value})} type="text" placeholder="Wedding Date?"/>
       <input name="hotel_name" value={hotelData.hotel_name} onChange={e=> setHotelData({...hotelData, hotel_name:e.target.value})}type="text" placeholder="Hotel Name"/>
@@ -151,25 +124,10 @@ function InvitationForm({venueData, setVenueData, hotelData, setHotelData, invit
       
       <Cloud />
       <input type="text" placeholder="Pictures of the Destination"/>
-
-      
-      
       <input onClick = {inviteSubmit} type="submit" value="submit" className="submit" />
     
     </React.Fragment>
   );
 }
-
-// function ItineraryForm() {
-//   return (
-//     <React.Fragment>
-//       {/* input will link to how may days are selected */}
-//       <input type="text" id="fullname" placeholder="full name"/>
-      
-      
-//       <input type="submit" value="submit" class="submit" />
-//     </React.Fragment>
-//   );
-// }
 
 export default InviteForm;
