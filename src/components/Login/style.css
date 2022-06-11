@@ -27,7 +27,6 @@
     padding: 5px;
   } */
 
-
   @import url('https://fonts.googleapis.com/css?family=Montserrat|Quicksand');
 
 *{
@@ -77,7 +76,7 @@ body{
 }
 
 .form-modal .login , .form-modal .signup{
-    background:#57b846;
+    background:#9CAE68;
     color:#fff;
 }
 
@@ -115,7 +114,7 @@ body{
 }
 
 #login-toggle ,#signup-toggle{
-    background:#57b846;
+    background:#9CAE68;
     color:#ffff;
 }
 
@@ -133,11 +132,6 @@ body{
     height:auto;
     padding-bottom:1em;
 }
-
-/* #signup-form{
-    display: none;
-} */
-
 
 #login-form button , #signup-form button{
     width:100%;
@@ -168,7 +162,6 @@ body{
     color:#222;
 }
 
-
 .form-modal p{
     font-size:16px;
     font-weight: bold;
@@ -184,7 +177,6 @@ body{
     color:#222;
 }
 
-
 .form-modal i {
     position: absolute;
     left:10%;
@@ -195,6 +187,8 @@ body{
 .-box-sd-effect:hover{
     box-shadow: 0 4px 8px hsla(210,2%,84%,.2);
 }
+
+/* MEDIA QUERIES */
 
 @media only screen and (max-width:500px){
     .form-modal{
