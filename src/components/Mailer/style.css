@@ -1,0 +1,29 @@
+.btn-info {
+    background-color: #9CAE68;
+    color: white;
+    border-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1 {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 100;
+    color: white; 
+}
+
+.btn-info:hover {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+#emailSubmit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -26,7 +26,6 @@ export default function Navbar(props) {
         <Link to="/mail"  className="nav-link " aria-current="page">Contact your guest</Link>
         </li>
         </div>
-       
         }
 
            
@@ -49,8 +48,5 @@ export default function Navbar(props) {
   </div>
 </nav>
 
-
   )
 }
-
-// export default Navbar;

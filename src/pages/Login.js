@@ -1,16 +1,11 @@
 import React from 'react'
 import { useEffect,useState } from "react";
 import API from "../utils/API"
-// import Navbar from "../components/NavBar/index"
 import Login from "../components/Login/index"
 import { useNavigate } from 'react-router-dom';
-// import Footer 
 
 
 const LoginPage = ({setIsLoggedIn,setUserId,setToken,token}) => {
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // const [userId, setUserId] = useState(null);
-  // const [token,setToken] = useState(null)
   const navigate = useNavigate()
   const [loginData, setLoginData] = useState({
     username:"",
@@ -73,9 +68,7 @@ const [signupData, setSignupData] = useState({
   }
   return (
     <div>
-      {/* <Navbar/> */}
       <Login login={handleLoginSubmit} signup={handleSignupSubmit} signupData={signupData} loginData={loginData} setSignupData={setSignupData} setLoginData={setLoginData}/>
-      {/* // <Footer /> */}
     </div>
   )
 }

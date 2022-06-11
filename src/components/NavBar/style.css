@@ -1,10 +1,7 @@
-nav >Link > nav-link {
-    /* font-weight: 500; */
+nav > Link > nav-link {
     letter-spacing:  0.0375rem;
     cursor: pointer;
     color: white;
-    
-  
   }
   
   #pagelogo {
@@ -15,19 +12,9 @@ nav >Link > nav-link {
     background-color: #9CAE68;
   }
   
-  
   nav ul li{
     text-transform: uppercase;
   }
-  
-  /* .navbar-nav > li > a {
-    margin-right: 0.75rem;
-    margin-left: 0.75rem;
-  color: white !important;
-  font-weight: bolder;
-  font-family: Comic-Sans-MS, Comic-Sans, cursive !important;
-  border-top: 0.1875rem solid var(--primary-dark);
-  } */
 
   .navbar-login{
     display:flex;
@@ -37,7 +24,6 @@ nav >Link > nav-link {
   color: white;
   font-weight: bolder;
   font-family: Comic-Sans-MS, Comic-Sans, cursive !important;
- 
   }
 
   .navbar-logout {
@@ -48,7 +34,6 @@ nav >Link > nav-link {
   color: white !important;
   font-weight: bolder;
   font-family: Comic-Sans-MS, Comic-Sans, cursive !important;
-  
   }
   
   .navbar-brand {
@@ -59,19 +44,10 @@ nav >Link > nav-link {
   
   .navbar-nav >li > a.active, .navbar-nav > li > a.active:focus {
     border-top: 0.1875rem solid white;
-  
   }
   
   .navbar-nav > li > a:hover {
     border-top: 0.1875rem solid white;
-  }
-
-  .header-wrapper {
-    position: relative;
-    background: url("https://imgix.bustle.com/uploads/image/2019/5/30/939d1229-54b1-41b6-a1a0-8b390d49bbd6-wedding_beach_couple.jpg?w=1200&h=630&fit=crop&crop=faces&fm=jpg") no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
   }
   
   .main-info {
@@ -86,7 +62,6 @@ nav >Link > nav-link {
     align-items: center;
     text-align: center;
     font-family: "Roboto Condesed"sans-serif;
-    
   }
   
 .main-info h1 {
@@ -94,11 +69,7 @@ nav >Link > nav-link {
     text-transform: uppercase;
   }
   
-  @media(max-width: 768px){
-    .main-info h1 {
-      font-size: 1.5rem !important;
-    }
-  }
+
   
   .btn-start {
     display: inline-flex; 
@@ -108,7 +79,6 @@ nav >Link > nav-link {
     border-radius: 0;
     padding:10px 12px 12px 12px !important;
     color: beige;
-  
   } 
   
 .btn-find {
@@ -119,9 +89,11 @@ nav >Link > nav-link {
     padding:10px 12px 12px 12px !important;
     color: beige;
   }
+
+  /*  MEDIA QUERIES */
+  @media(max-width: 768px){
+    .main-info h1 {
+      font-size: 1.5rem !important;
+    }
+  }
   
-  .btn-resume :hover {
-    text-decoration: none;
-    background-color: orange ;
-    transition: .2s ease-in-out ;
-  } 
