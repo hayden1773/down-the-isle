@@ -1,10 +1,6 @@
 import React from 'react'
-// import Navbar from '../components/NavBar/index'
 import InvitationPreview from '../components/InvitationPreview/index'
 import PreviewData from '../components/PreviewData/previewData'
-//import {useState} from 'react'
-
-//const[token,setToken]=useState(null)
 
 const Invite = ({userId, setUserId,setToken,token}) => {
   
@@ -15,11 +11,8 @@ const Invite = ({userId, setUserId,setToken,token}) => {
 
   return (
     <div>
-      {/* <Navbar /> */}
       <PreviewData userId={userId} setUserId={setUserId} setToken={findToken} token={token} /> 
       <InvitationPreview />
-      
-      {/* <Footer /> */}
     </div>
   )
 }
