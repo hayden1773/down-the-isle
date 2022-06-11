@@ -77,10 +77,10 @@ const PreviewData = ({ userId, setUserId, setToken, token }) => {
           <motion.div>
           
             <p>Our wedding will be on {user&& user.Events[0].wedding_date} </p>
-            <h5>Wedding Venue</h5>
+            <h5 id="previewHeader">Wedding Venue</h5>
             <p>Name: {user&& user.Events[0].Venue.venue_name} </p>
             <p>Address: {user&& user.Events[0].Venue.venue_address} </p>
-            <h5>Hotel to Book:</h5>
+            <h5 id="previewHeader">Hotel to Book:</h5>
             <p>Name: {user&& user.Events[0].Hotel.hotel_name} </p>
             <p>Address: {user&& user.Events[0].Hotel.hotel_address} </p>
             <p>Contact: {user&& user.Events[0].Hotel.contact_phone} </p>
@@ -92,7 +92,7 @@ const PreviewData = ({ userId, setUserId, setToken, token }) => {
 
       <div className='Preview'>
        <motion.div transition={{layout:{duration: 1, type:"spring"}}} Layout onClick={() => setIsOpen(!isOpen)}className='card'>
-           <motion.h2 Layout="position">GUEST LIST </motion.h2>
+           <motion.h2 Layout="position" id="guestHeader">GUEST LIST</motion.h2>
            {isOpen && (
            <motion.div>
                <p>{user&& user.Events[0].Invites[0].guest_name}</p>

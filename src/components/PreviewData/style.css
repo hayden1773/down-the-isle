@@ -6,13 +6,38 @@
     align-items: center;
 }  
 
-
  .card {
     background: whitesmoke;
     padding: 3rem 5rem;
+    background-color: rgb(240, 237, 204);
+    box-shadow:3px 3px 20px 0px rgba(1, 1, 1, 0.1)
 }
 
 .card p{
  padding-top:1rem;
  line-height: 150%;
+}
+
+#previewHeader {
+    font-family: georgia !important;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
+}
+
+.Preview {
+    display: flex;
+    text-align: center;
+}
+
+#guestHeader {
+    font-weight: 200;
+    font-size: 20px !important;
+    font-family: georgia !important;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
+    text-align: center;
+}
+
+p, h4 {
+    font-family: georgia !important;
 }
