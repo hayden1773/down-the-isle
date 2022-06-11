@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import "./style.css";
 
+// Login and Signup form with functionality 
 export default function Login({
     login,
     signup,
