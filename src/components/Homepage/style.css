@@ -1,6 +1,5 @@
 .header-wrapper {
     position: relative;
-    /* background: url("https://imgix.bustle.com/uploads/image/2019/5/30/939d1229-54b1-41b6-a1a0-8b390d49bbd6-wedding_beach_couple.jpg?w=1200&h=630&fit=crop&crop=faces&fm=jpg") no-repeat; */
     background: url("https://junebugweddings.com/wedding-blog/wp-content/uploads/2020/11/lush-riviera-maya-beach-wedding-blue-venado-cristina-civarello-53.jpg");
     background-size: cover;
     background-position: center;
@@ -28,14 +27,14 @@
   .main-info h1 {
     color: var(--primary-white);
     text-transform: uppercase;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 700;
     font-size: 100;
   }
   
-  .btnstart {
+  .btn-start {
     display: inline-flex; 
     border:1px solid;
     margin-right:30px;
@@ -43,8 +42,15 @@
     border-radius: 2;
     padding:10px 12px 12px 12px !important;
     background-color: white;
-    /* color: #9CAE68; */
+    font-family: georgia;
   }
+
+  .btn-start:hover {
+    background-color: #9CAE68 !important;
+    color: white !important;
+  }
+
+  /*  MEDIA QUERIES */
 
   @media(max-width: 768px){
     .main-info h1 {
