@@ -5,13 +5,20 @@
   }
 
   #aboutUs h1 {
-    font-style: italic;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 100;
+    color: white; 
   }
 
   #aboutUs h3 {
     color: #9CAE68;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
   }
   
   #aboutUs p {
@@ -22,6 +29,8 @@
     border-radius: 20px;
     opacity: .8;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: black;
   }
   
   .image1 {
